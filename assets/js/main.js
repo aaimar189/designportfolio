@@ -120,16 +120,19 @@
 
 	// New functionality for "Learn More" button (toggling extra text)
 
-		document.getElementById('reveal-btn').addEventListener('click', function(event) {
-    		event.preventDefault();  // Prevent page from scrolling to top
-    		var extraText = document.querySelector('.extra-text');
+		document.addEventListener("DOMContentLoaded", function() {
     		var button = document.getElementById('reveal-btn');
-    
-   		 if (extraText.style.display === "none") {
-        	extraText.style.display = "block";  // Show the extra text
-	        button.textContent = "Show Less";  // Change button text
-    		} else {
-        	extraText.style.display = "none";  // Hide the extra text
-        	button.textContent = "Learn More";  // Reset button text
-    		}
+    		var extraText = document.querySelector('.extra-text');
+
+	// Ensure the extra text is hidden at the start
+   		extraText.classList.remove("show");
+
+    		button.addEventListener('click', function(event) {
+        	event.preventDefault();  // Prevents scrolling to the top when clicking
+
+        	extraText.classList.toggle("show");  // Toggle visibility
+        
+	// Update button text
+        	button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
+    });
 });
