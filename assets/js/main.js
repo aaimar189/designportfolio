@@ -115,3 +115,21 @@
 			});
 
 })(jQuery);
+
+
+
+	// New functionality for "Learn More" button (toggling extra text)
+
+		document.getElementById('reveal-btn').addEventListener('click', function(event) {
+    		event.preventDefault();  // Prevent page from scrolling to top
+    		var extraText = document.querySelector('.extra-text');
+    		var button = document.getElementById('reveal-btn');
+    
+   		 if (extraText.style.display === "none") {
+        	extraText.style.display = "block";  // Show the extra text
+	        button.textContent = "Show Less";  // Change button text
+    		} else {
+        	extraText.style.display = "none";  // Hide the extra text
+        	button.textContent = "Learn More";  // Reset button text
+    		}
+});
