@@ -3225,3 +3225,17 @@ input, select, textarea {
 			}
 
 	}
+
+.extra-text {
+    display: none; /* Initially hidden */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.extra-text.show {
+    display: block;
+    opacity: 1;
+    max-height: 500px; /* Adjust based on content height */
+}
