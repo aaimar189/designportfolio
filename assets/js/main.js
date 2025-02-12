@@ -136,3 +136,25 @@
         	button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
     });
 });
+
+
+		document.getElementById('portfolio-btn').addEventListener('click', function(event) {
+    		event.preventDefault(); // Prevent default link behavior
+    		var extraProjects = document.querySelectorAll('.extra-project');
+    		var button = document.getElementById('portfolio-btn');
+
+    extraProjects.forEach(function(project) {
+        if (project.style.display === "none" || project.style.display === "") {
+            project.style.display = "block"; // Show extra projects
+        } else {
+            project.style.display = "none"; // Hide them again
+        }
+    });
+
+    // Toggle button text
+    if (button.textContent === "Full Portfolio") {
+        button.textContent = "Show Less";
+    } else {
+        button.textContent = "Full Portfolio";
+    }
+});
