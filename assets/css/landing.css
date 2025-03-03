@@ -12,13 +12,13 @@
 }
 
 .btn:hover {
-    background-color: #d19a00;
+    background-color: rgba(255, 255, 255, 0);
     border-color: #d19a00;
     color: white;
 }
 
 .btn:active {
-    background-color: rgba(73, 191, 157, 0.1);
+    background-color: rgba(255, 255, 255, 0);
     border-color: #d19a00;
     color: #49bf9d;
 }
