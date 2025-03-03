@@ -112,7 +112,7 @@
     });
 
     // Learn More Toggle Text functionality
-   document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() {
     // Learn More Toggle Text functionality
     var button = document.getElementById('reveal-btn');
     var extraText = document.querySelector('.extra-text');
@@ -168,3 +168,5 @@
         seeLessButton.style.display = "none"; // Hide "See Less" button
     });
 });
+
+})(jQuery);
