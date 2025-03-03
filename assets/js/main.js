@@ -112,27 +112,29 @@
     });
 
     // Learn More Toggle Text functionality
-    document.addEventListener("DOMContentLoaded", function() {
-        var button = document.getElementById('reveal-btn');
-        var extraText = document.querySelector('.extra-text');
-        
-        // Ensure the extra text is hidden at the start
-        extraText.classList.remove("show");
+   document.addEventListener("DOMContentLoaded", function() {
+    // Learn More Toggle Text functionality
+    var button = document.getElementById('reveal-btn');
+    var extraText = document.querySelector('.extra-text');
+    
+    // Ensure the extra text is hidden at the start
+    extraText.classList.remove("show");
 
-        button.addEventListener('click', function(event) {
-            event.preventDefault();  // Prevents scrolling to the top when clicking
-            extraText.classList.toggle("show");  // Toggle visibility
+    button.addEventListener('click', function(event) {
+        event.preventDefault();  // Prevents scrolling to the top when clicking
+        extraText.classList.toggle("show");  // Toggle visibility
 
-            // Update button text
-            button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
-        });
+        // Update button text
+        button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
     });
 
     // Portfolio Toggle (Full Portfolio and Hide/Show Projects)
-    document.getElementById('portfolio-btn').addEventListener('click', function(event) {
+    var portfolioButton = document.getElementById('portfolio-btn');
+    var seeLessButton = document.getElementById('see-less-btn');
+    
+    portfolioButton.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default link behavior
         var extraProjects = document.querySelectorAll('.extra-project');
-        var button = document.getElementById('portfolio-btn');
 
         extraProjects.forEach(function(project) {
             if (project.style.display === "none" || project.style.display === "") {
@@ -143,11 +145,26 @@
         });
 
         // Toggle button text
-        if (button.textContent === "Full Portfolio") {
-            button.textContent = "Show Less";
+        if (portfolioButton.textContent === "Full Portfolio") {
+            portfolioButton.textContent = "Show Less";
+            seeLessButton.style.display = "inline-block"; // Show "See Less" button
         } else {
-            button.textContent = "Full Portfolio";
+            portfolioButton.textContent = "Full Portfolio";
+            seeLessButton.style.display = "none"; // Hide "See Less" button
         }
     });
 
-})(jQuery);
+    // See Less functionality (Hide extra projects and show Full Portfolio button)
+    seeLessButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        var extraProjects = document.querySelectorAll('.extra-project');
+
+        extraProjects.forEach(function(project) {
+            project.style.display = "none"; // Hide extra projects
+        });
+
+        // Update button text for "Full Portfolio"
+        portfolioButton.textContent = "Full Portfolio";
+        seeLessButton.style.display = "none"; // Hide "See Less" button
+    });
+});
