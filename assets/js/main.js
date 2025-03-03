@@ -81,80 +81,44 @@
     // Main Sections: Two.
 
 
-     $(function() {
-        var $gallery = $('#two');
-        var $discoverMoreBtn = $('#portfolio-btn');
-        var $extraProjects = $('.extra-project');
+    (function($) {
+    var $gallery = $('#two');  // Target only the main section
+    var $discoverMoreBtn = $('#portfolio-btn');
+    var $extraProjects = $('.extra-project');
 
-        function initPoptrox() {
-            if ($gallery.data('poptrox')) {
-                $gallery.poptrox('destroy');
-            }
-
-            $gallery.poptrox({
-                caption: function($a) { return $a.attr('data-title'); },
-                overlayColor: '#2c2c2c',
-                overlayOpacity: 0.85,
-                popupCloserText: '',
-                popupLoaderText: '',
-                selector: '.work-item a.image',
-                usePopupCaption: true,
-                usePopupDefaultStyling: false,
-                usePopupEasyClose: false,
-                usePopupNav: true,
-                windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-            });
-        }
-
-        // Initial Load
-        initPoptrox();
-
-        // Click event for "Discover More"
-        $discoverMoreBtn.click(function(e) {
-            e.preventDefault();
-            $extraProjects.fadeIn(400, function() {
-                initPoptrox();  // Reinitialize Poptrox after new items appear
-            });
-            $(this).hide();
+    // Initialize Poptrox Lightbox
+    function initPoptrox() {
+        $gallery.poptrox({
+            caption: function($a) { return $a.attr('data-title'); },
+            overlayColor: '#2c2c2c',
+            overlayOpacity: 0.85,
+            popupCloserText: '',
+            popupLoaderText: '',
+            selector: '.work-item a.image', // Adjust selector if needed
+            usePopupCaption: true,
+            usePopupDefaultStyling: false,
+            usePopupEasyClose: false,
+            usePopupNav: true,
+            windowMargin: (breakpoints.active('<=small') ? 0 : 50)
         });
-    });
+    }
 
-    // New functionality for "Learn More" button
-    document.addEventListener("DOMContentLoaded", function() {
-        var button = document.getElementById('reveal-btn');
-        var extraText = document.querySelector('.extra-text');
+    // Initial Load
+    initPoptrox();
 
-        extraText.classList.remove("show");
+    // Click event for "Discover More" button
+    $discoverMoreBtn.click(function(e) {
+        e.preventDefault();
 
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-            extraText.classList.toggle("show");
-            button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
-        });
-    });
-
-    // Ensure the extra projects are toggled correctly
-    document.getElementById('portfolio-btn').addEventListener('click', function(event) {
-        event.preventDefault();
-        var extraProjects = document.querySelectorAll('.extra-project');
-        var button = document.getElementById('portfolio-btn');
-
-        extraProjects.forEach(function(project) {
-            if (project.style.display === "none" || project.style.display === "") {
-                project.style.display = "block";
-            } else {
-                project.style.display = "none";
-            }
+        // Fade in the extra projects
+        $extraProjects.fadeIn(400, function() {
+            // Now that the projects are visible, manually add them to Poptrox
+            // This will bind Poptrox to the new elements
+            $gallery.poptrox('add', '.work-item a.image');
         });
 
-        if (button.textContent === "Full Portfolio") {
-            button.textContent = "Show Less";
-        } else {
-            button.textContent = "Full Portfolio";
-        }
-
-        // Reinitialize Poptrox after projects are revealed
-        initPoptrox();
+        // Hide the "Discover More" button
+        $(this).hide();
     });
 
 })(jQuery);
