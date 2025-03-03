@@ -97,22 +97,21 @@
 
 		// Lightbox gallery.
 			$(function() {
-    var $gallery = $('#two'); 
-    var $extraProjects = $('.extra-project'); 
+    var $gallery = $('#two, .extra-projects-container'); // Ensure both sections are included
     var $discoverMoreBtn = $('#portfolio-btn');
 
     function initPoptrox() {
-        // Destroy existing poptrox instance if needed
+        // Destroy any existing Poptrox instance
         $gallery.poptrox('destroy'); 
         
-        // Reinitialize Poptrox with updated elements
+        // Reinitialize with ALL visible elements
         $gallery.poptrox({
             caption: function($a) { return $a.attr('data-title'); },
             overlayColor: '#2c2c2c',
             overlayOpacity: 0.85,
             popupCloserText: '',
             popupLoaderText: '',
-            selector: '.work-item a.image', // Ensure only correct elements are selected
+            selector: '.work-item a.image', // Make sure it targets only image links
             usePopupCaption: true,
             usePopupDefaultStyling: false,
             usePopupEasyClose: false,
@@ -121,22 +120,21 @@
         });
     }
 
-    // Initial Poptrox Load (only for visible projects)
+    // Initial Poptrox load for visible projects
     initPoptrox();
 
-    // Show extra projects when "Discover More" is clicked
+    // Click event for "Discover More"
     $discoverMoreBtn.click(function(e) {
         e.preventDefault();
 
-        // Reveal hidden projects
-        $extraProjects.fadeIn(400, function() {
+        // Show hidden extra projects
+        $('.extra-project').fadeIn(400, function() {
             initPoptrox(); // Reinitialize Poptrox AFTER they become visible
         });
 
-        $(this).hide(); // Hide button after use
+        $(this).hide(); // Hide the button after use
     });
 });
-
 
 
 
