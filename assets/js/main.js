@@ -140,6 +140,8 @@
 });
 
 
+})(jQuery);
+
 
 
 	// New functionality for "Learn More" button (toggling extra text)
