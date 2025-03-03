@@ -80,19 +80,17 @@
 
     // Main Sections: Two.
 
-    // Lightbox gallery.
-    $(function() {
-        var $gallery = $('#two');  // Target only the main section
+
+     $(function() {
+        var $gallery = $('#two');
         var $discoverMoreBtn = $('#portfolio-btn');
         var $extraProjects = $('.extra-project');
 
         function initPoptrox() {
-            // Destroy existing instance to avoid duplication
             if ($gallery.data('poptrox')) {
                 $gallery.poptrox('destroy');
             }
 
-            // Reinitialize Poptrox with new items
             $gallery.poptrox({
                 caption: function($a) { return $a.attr('data-title'); },
                 overlayColor: '#2c2c2c',
@@ -114,51 +112,49 @@
         // Click event for "Discover More"
         $discoverMoreBtn.click(function(e) {
             e.preventDefault();
-
-            // Show hidden projects and reinitialize Poptrox after they appear
             $extraProjects.fadeIn(400, function() {
-                initPoptrox();
+                initPoptrox();  // Reinitialize Poptrox after new items appear
             });
-
-            $(this).hide(); // Hide the button after use
+            $(this).hide();
         });
     });
 
-    // New functionality for "Learn More" button (toggling extra text)
+    // New functionality for "Learn More" button
     document.addEventListener("DOMContentLoaded", function() {
         var button = document.getElementById('reveal-btn');
         var extraText = document.querySelector('.extra-text');
 
-        // Ensure the extra text is hidden at the start
         extraText.classList.remove("show");
 
         button.addEventListener('click', function(event) {
-            event.preventDefault();  // Prevents scrolling to the top when clicking
-
-            extraText.classList.toggle("show");  // Toggle visibility
-
-            // Update button text
+            event.preventDefault();
+            extraText.classList.toggle("show");
             button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
         });
     });
 
-    // Toggling visibility of extra portfolio projects
+    // Ensure the extra projects are toggled correctly
     document.getElementById('portfolio-btn').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
+        event.preventDefault();
         var extraProjects = document.querySelectorAll('.extra-project');
         var button = document.getElementById('portfolio-btn');
 
-        // Toggle visibility for all extra projects
         extraProjects.forEach(function(project) {
-            project.classList.toggle('show');
+            if (project.style.display === "none" || project.style.display === "") {
+                project.style.display = "block";
+            } else {
+                project.style.display = "none";
+            }
         });
 
-        // Update button text based on the visibility of extra projects
-        if (extraProjects[0].classList.contains('show')) {
+        if (button.textContent === "Full Portfolio") {
             button.textContent = "Show Less";
         } else {
             button.textContent = "Full Portfolio";
         }
+
+        // Reinitialize Poptrox after projects are revealed
+        initPoptrox();
     });
 
 })(jQuery);
