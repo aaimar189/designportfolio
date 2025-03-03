@@ -1,0 +1,26 @@
+.btn {
+    display: inline-block;
+    background-color: #5f6369;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 0.35em;
+    border: solid 3px #efefef;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #d19a00;
+    border-color: #d19a00;
+    color: white;
+}
+
+.btn:active {
+    background-color: rgba(73, 191, 157, 0.1);
+    border-color: #d19a00;
+    color: #49bf9d;
+}
+
+/* Add other specific landing page styles */
