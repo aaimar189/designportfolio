@@ -103,7 +103,7 @@
         overlayOpacity: 0.85,
         popupCloserText: '',
         popupLoaderText: '',
-        selector: '.work-item a',
+        selector: '.work-item a.image',
         usePopupCaption: true,  // This needs to be true to show the caption
         usePopupDefaultStyling: false,
         usePopupEasyClose: false,
