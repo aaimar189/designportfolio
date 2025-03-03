@@ -96,20 +96,18 @@
 	// Main Sections: Two.
 
 		// Lightbox gallery.
-			$window.on('load', function() {
+			$(function() {
     $('#two').poptrox({
-        caption: function($a) { 
-            return $a.data('title'); // Make sure to use the data-title for the caption
-        },
+        caption: function($a) { return $a.attr('data-title'); },  // Make sure this is correct
         overlayColor: '#2c2c2c',
         overlayOpacity: 0.85,
         popupCloserText: '',
         popupLoaderText: '',
         selector: '.work-item a.image',
-        usePopupCaption: true,
+        usePopupCaption: true,  // This needs to be true to show the caption
         usePopupDefaultStyling: false,
         usePopupEasyClose: false,
-        usePopupNav: true, // Keep it true to allow navigation
+        usePopupNav: true,
         windowMargin: (breakpoints.active('<=small') ? 0 : 50)
     });
 });
