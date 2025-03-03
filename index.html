@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="path/to/main.css">
+    <link rel="stylesheet" href="assets/css/main.css"> <!-- Correct CSS path -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
@@ -82,17 +82,15 @@
         <div class="landing-content">
             <h1>Welcome to My Website</h1>
             <p>Explore my collection and discover more.</p>
-            <a href="huha.html" class="btn">Enter Site</a>
+            <a href="home.html" class="btn">Enter Site</a>
         </div>
     </div>
 
     <!-- Add the redirect script here, just before closing the body tag -->
     <script type="text/javascript">
         setTimeout(function() {
-            window.location.href = "home.html"; // Redirect to old index (huha.html)
+            window.location.href = "home.html"; // Redirect to old index (home.html)
         }, 3000); // Redirect after 3 seconds
     </script>
 </body>
-</html>
-
 </html>
