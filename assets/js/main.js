@@ -98,7 +98,9 @@
 		// Lightbox gallery.
 			$window.on('load', function() {
     $('#two').poptrox({
-        caption: function($a) { return $a.closest('article').find('p').text(); }, // Adjusted for the <p> tag caption
+        caption: function($a) { 
+            return $a.data('title'); // Make sure to use the data-title for the caption
+        },
         overlayColor: '#2c2c2c',
         overlayOpacity: 0.85,
         popupCloserText: '',
@@ -107,10 +109,11 @@
         usePopupCaption: true,
         usePopupDefaultStyling: false,
         usePopupEasyClose: false,
-        usePopupNav: true, // Or false if you want to disable navigation
+        usePopupNav: true, // Keep it true to allow navigation
         windowMargin: (breakpoints.active('<=small') ? 0 : 50)
     });
 });
+
 
 
 })(jQuery);
