@@ -20,7 +20,7 @@ body, html {
     text-align: center;
     color: white;
     padding: 0 20px; /* For small screens */
-    background: url('images/background.jpg') no-repeat center center/cover; /* Set background image */
+    background: url('images/fulls/01.jpg') no-repeat center center/cover; /* Set background image */
 }
 
 .landing-content {
