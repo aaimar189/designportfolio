@@ -10,7 +10,7 @@
 
 body, html {
     height: 100%;
-    font-family: Source Sans Pro, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Landing Page Layout */
@@ -42,7 +42,7 @@ h1 {
 p {
     font-size: 1.2em;
     margin-bottom: 30px;
-    font-family: Libre Baskerville;
+    font-family: 'Libre Baskerville';
 }
 
 /* Your Existing Button Styles */
