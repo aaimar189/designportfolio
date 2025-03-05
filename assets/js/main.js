@@ -71,102 +71,101 @@
     }
 
     // Portfolio Section with Lightbox Gallery (Poptrox)
-   $(function() {
-    var $gallery = $('#two'); // Target only the main section
-    var $discoverMoreBtn = $('#portfolio-btn');
-    var $extraProjects = $('.extra-project');
+    $(function() {
+        var $gallery = $('#two .row'); // Target the row within the main section
+        var $discoverMoreBtn = $('#portfolio-btn');
+        var $extraProjects = $('.extra-project');
 
-    function initPoptrox() {
-        if ($gallery.data('poptrox')) {
-            $gallery.poptrox('destroy'); // Destroy existing Poptrox instance if it exists
+        function initPoptrox() {
+            if ($gallery.data('poptrox')) {
+                $gallery.poptrox('destroy'); // Destroy existing Poptrox instance if it exists
+            }
+
+            // Reinitialize Poptrox with new items
+            $gallery.poptrox({
+                caption: function($a) { return $a.attr('data-title'); },
+                overlayColor: '#2c2c2c',
+                overlayOpacity: 0.85,
+                popupCloserText: '',
+                popupLoaderText: '',
+                selector: '.work-item a.image',
+                usePopupCaption: true,
+                usePopupDefaultStyling: false,
+                usePopupEasyClose: false,
+                usePopupNav: true,
+                windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+            });
         }
 
-        // Reinitialize Poptrox with new items
-        $gallery.poptrox({
-            caption: function($a) { return $a.attr('data-title'); },
-            overlayColor: '#2c2c2c',
-            overlayOpacity: 0.85,
-            popupCloserText: '',
-            popupLoaderText: '',
-            selector: '.work-item a.image',
-            usePopupCaption: true,
-            usePopupDefaultStyling: false,
-            usePopupEasyClose: false,
-            usePopupNav: true,
-            windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+        // Initial Load
+        initPoptrox();
+
+        // "Discover More" button click event to show more projects
+        $discoverMoreBtn.click(function(e) {
+            e.preventDefault();
+            $extraProjects.fadeIn(400, function() {
+                initPoptrox(); // Reinitialize Poptrox after showing hidden projects
+            });
+
+            $(this).hide(); // Hide the button after use
         });
-    }
-
-    // Initial Load
-    initPoptrox();
-
-    // "Discover More" button click event to show more projects
-    $discoverMoreBtn.click(function(e) {
-        e.preventDefault();
-        $extraProjects.fadeIn(400, function() {
-            initPoptrox(); // Reinitialize Poptrox after showing hidden projects
-        });
-
-        $(this).hide(); // Hide the button after use
-    });
-});
-
-    // Learn More Toggle Text functionality
-  document.addEventListener("DOMContentLoaded", function() {
-    // Learn More Toggle Text functionality
-    var button = document.getElementById('reveal-btn');
-    var extraText = document.querySelector('.extra-text');
-    
-    // Ensure the extra text is hidden at the start
-    extraText.classList.remove("show");
-
-    button.addEventListener('click', function(event) {
-        event.preventDefault();  // Prevents scrolling to the top when clicking
-        extraText.classList.toggle("show");  // Toggle visibility
-
-        // Update button text
-        button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
     });
 
-    // Portfolio Toggle (Full Portfolio and Hide/Show Projects)
-    var portfolioButton = document.getElementById('portfolio-btn');
-    var seeLessButton = document.getElementById('see-less-btn');
-    
-    portfolioButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
-        var extraProjects = document.querySelectorAll('.extra-project');
+    // Learn More Toggle Text functionality
+    document.addEventListener("DOMContentLoaded", function() {
+        var button = document.getElementById('reveal-btn');
+        var extraText = document.querySelector('.extra-text');
+        
+        // Ensure the extra text is hidden at the start
+        extraText.classList.remove("show");
 
-        extraProjects.forEach(function(project) {
-            if (project.style.display === "none" || project.style.display === "") {
-                project.style.display = "block"; // Show extra projects
+        button.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevents scrolling to the top when clicking
+            extraText.classList.toggle("show");  // Toggle visibility
+
+            // Update button text
+            button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
+        });
+
+        // Portfolio Toggle (Full Portfolio and Hide/Show Projects)
+        var portfolioButton = document.getElementById('portfolio-btn');
+        var seeLessButton = document.getElementById('see-less-btn');
+        
+        portfolioButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var extraProjects = document.querySelectorAll('.extra-project');
+
+            extraProjects.forEach(function(project) {
+                if (project.style.display === "none" || project.style.display === "") {
+                    project.style.display = "block"; // Show extra projects
+                } else {
+                    project.style.display = "none"; // Hide them again
+                }
+            });
+
+            // Toggle button text
+            if (portfolioButton.textContent === "Full Portfolio") {
+                portfolioButton.textContent = "Show Less";
+                seeLessButton.style.display = "inline-block"; // Show "See Less" button
             } else {
-                project.style.display = "none"; // Hide them again
+                portfolioButton.textContent = "Full Portfolio";
+                seeLessButton.style.display = "none"; // Hide "See Less" button
             }
         });
 
-        // Toggle button text
-        if (portfolioButton.textContent === "Full Portfolio") {
-            portfolioButton.textContent = "Show Less";
-            seeLessButton.style.display = "inline-block"; // Show "See Less" button
-        } else {
+        // See Less functionality (Hide extra projects and show Full Portfolio button)
+        seeLessButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            var extraProjects = document.querySelectorAll('.extra-project');
+
+            extraProjects.forEach(function(project) {
+                project.style.display = "none"; // Hide extra projects
+            });
+
+            // Update button text for "Full Portfolio"
             portfolioButton.textContent = "Full Portfolio";
             seeLessButton.style.display = "none"; // Hide "See Less" button
-        }
-    });
-
-    // See Less functionality (Hide extra projects and show Full Portfolio button)
-    seeLessButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
-        var extraProjects = document.querySelectorAll('.extra-project');
-
-        extraProjects.forEach(function(project) {
-            project.style.display = "none"; // Hide extra projects
         });
-
-        // Update button text for "Full Portfolio"
-        portfolioButton.textContent = "Full Portfolio";
-        seeLessButton.style.display = "none"; // Hide "See Less" button
     });
-});
 
 })(jQuery);
