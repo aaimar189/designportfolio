@@ -71,45 +71,45 @@
     }
 
     // Portfolio Section with Lightbox Gallery (Poptrox)
-    $(function() {
-        var $gallery = $('#two'); // Target only the main section
-        var $discoverMoreBtn = $('#portfolio-btn');
-        var $extraProjects = $('.extra-project');
+   $(function() {
+    var $gallery = $('#two'); // Target only the main section
+    var $discoverMoreBtn = $('#portfolio-btn');
+    var $extraProjects = $('.extra-project');
 
-        function initPoptrox() {
-            if ($gallery.data('poptrox')) {
-                $gallery.poptrox('destroy');
-            }
-
-            // Reinitialize Poptrox with new items
-            $gallery.poptrox({
-                caption: function($a) { return $a.attr('data-title'); },
-                overlayColor: '#2c2c2c',
-                overlayOpacity: 0.85,
-                popupCloserText: '',
-                popupLoaderText: '',
-                selector: '.work-item a.image',
-                usePopupCaption: true,
-                usePopupDefaultStyling: false,
-                usePopupEasyClose: false,
-                usePopupNav: true,
-                windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-            });
+    function initPoptrox() {
+        if ($gallery.data('poptrox')) {
+            $gallery.poptrox('destroy'); // Destroy existing Poptrox instance if it exists
         }
 
-        // Initial Load
-        initPoptrox();
-
-        // "Discover More" button click event to show more projects
-        $discoverMoreBtn.click(function(e) {
-            e.preventDefault();
-            $extraProjects.fadeIn(400, function() {
-                initPoptrox();
-            });
-
-            $(this).hide(); // Hide the button after use
+        // Reinitialize Poptrox with new items
+        $gallery.poptrox({
+            caption: function($a) { return $a.attr('data-title'); },
+            overlayColor: '#2c2c2c',
+            overlayOpacity: 0.85,
+            popupCloserText: '',
+            popupLoaderText: '',
+            selector: '.work-item a.image',
+            usePopupCaption: true,
+            usePopupDefaultStyling: false,
+            usePopupEasyClose: false,
+            usePopupNav: true,
+            windowMargin: (breakpoints.active('<=small') ? 0 : 50)
         });
+    }
+
+    // Initial Load
+    initPoptrox();
+
+    // "Discover More" button click event to show more projects
+    $discoverMoreBtn.click(function(e) {
+        e.preventDefault();
+        $extraProjects.fadeIn(400, function() {
+            initPoptrox(); // Reinitialize Poptrox after showing hidden projects
+        });
+
+        $(this).hide(); // Hide the button after use
     });
+});
 
     // Learn More Toggle Text functionality
   document.addEventListener("DOMContentLoaded", function() {
