@@ -1,4 +1,4 @@
-(function($) {
+-(function($) {
     var $window = $(window),
         $body = $('body'),
         $header = $('#header'),
@@ -72,7 +72,7 @@
 
     // Portfolio Section with Lightbox Gallery (Poptrox)
     $(function() {
-    var $gallery = $('#two .row'); // Target the row inside #two
+    var $gallery = $('#two .row, section .row'); // Include both rows (initial and extra)
     var $discoverMoreBtn = $('#portfolio-btn');
     var $extraProjects = $('.extra-project');
 
