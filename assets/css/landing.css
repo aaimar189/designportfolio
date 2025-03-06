@@ -44,7 +44,8 @@ body, html {
 /* Keyframes for background images */
 @keyframes slideshow {
     0% { background-image: url('/images/background-01.png'); }
-    100% { background-image: url('/images/background-02.png'); }
+    50% { background-image: url('/images/background-02.png'); }
+    100% { background-image: url('/images/background-01.png'); }
 }
 
 .landing-content {
