@@ -34,19 +34,33 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: -1;
-    
-    /* Creates animation */
-    animation: slideshow 12s infinite;
+    animation: slideshow 12s infinite; /* Adjust duration for smoother transition */
     background-size: cover;
     background-position: center;
+    transition: opacity 1s ease-in-out; /* Smooth fade effect */
 }
 
 /* Keyframes for background images */
 @keyframes slideshow {
-    0% { background-image: url('/images/background-01.png'); }
-    33% { background-image: url('/images/background-02.png'); }
-    66% { background-image: url('/images/background-03.png'); }
-    100% { background-image: url('/images/background-01.png'); }
+    0% {
+        background-image: url('/images/background-01.png');
+        opacity: 1;
+    }
+    33% {
+        background-image: url('/images/background-02.png');
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    66% {
+        background-image: url('/images/background-03.png');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('/images/background-01.png');
+        opacity: 1;
+    }
 }
 
 .landing-content {
