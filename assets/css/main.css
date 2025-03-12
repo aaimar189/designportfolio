@@ -1561,6 +1561,11 @@ input, select, textarea {
 		position: relative;
 	}
 
+
+	.portfolio-article p {
+    		display: none; /* Hides the paragraphs below the articles */
+	}
+
 		.image:before {
 			-moz-transition: opacity 0.2s ease-in-out;
 			-webkit-transition: opacity 0.2s ease-in-out;
