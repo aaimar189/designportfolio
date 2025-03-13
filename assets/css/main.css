@@ -2208,8 +2208,8 @@ input, select, textarea {
 
 		#main > section {
 			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			/* margin: 4em 0 0 0;
+			padding: 4em 0 0 0; */
 		}
 
 			#main > section:first-child {
@@ -2695,8 +2695,8 @@ input, select, textarea {
 			}
 
 				#main > section {
-					margin: 2.25em 0 0 0;
-					padding: 2.25em 0 0 0;
+					/* margin: 2.25em 0 0 0;
+					padding: 2.25em 0 0 0; */
 				}
 
 		/* Poptrox */
@@ -2754,4 +2754,40 @@ input, select, textarea {
 
 .extra-project {
     display: none;
+}
+
+/* Remove the "View" text from the image thumbnails */
+.image.thumb:after {
+    content: none !important; /* Remove the "View" text */
+}
+
+/* Ensure the view button is hidden by default and appears on hover */
+.work-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.view-btn {
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: greenyellow; /* Optional: Add background for better visibility */
+    color: #fff; /* Optional: Ensure text is visible */
+    padding: 10px 20px; /* Optional: Add padding for better appearance */
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+.work-item:hover .view-btn {
+    opacity: 1;
+}
+@media screen and (max-width: 736px) {
+    #main > section {
+        /* margin: 2.25em 0 0 0; */
+        /* padding: 2.25em 0 0 0; */
+    }
 }
