@@ -2769,22 +2769,28 @@ input, select, textarea {
 
 .view-btn {
     position: absolute;
-    bottom: 180px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 80px;
+    left: 15%;
     opacity: 0;
     transition: opacity 0.3s ease;
-    background: greenyellow; /* Optional: Add background for better visibility */
-    color: #fff; /* Optional: Ensure text is visible */
-    padding: 10px 20px; /* Optional: Add padding for better appearance */
+    color: white;
+    font-family: inherit; /* Use the same font as the header */
+    font-size: 1.5em; /* Adjust size as needed */
+    font-weight: bold;
+    text-decoration: none;
+    background: none;
     border: none;
     cursor: pointer;
-    text-decoration: none; /* Remove underline */
 }
 
 .work-item:hover .view-btn {
     opacity: 1;
 }
+
+.work-item:hover .work-description {
+    display: none; /* Hide the paragraph on hover */
+}
+
 @media screen and (max-width: 736px) {
     #main > section {
         /* margin: 2.25em 0 0 0; */
