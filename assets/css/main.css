@@ -1579,16 +1579,17 @@ input, select, textarea {
 /* Thumbnail Container (thumb) */
 .image.thumb {
     text-align: center;
-    position: relative; /* Make sure this is relative for absolute elements to be positioned */
+    position: relative; /* Ensure the parent is positioned relative */
+    display: inline-block; /* Prevents unwanted stretching */
 }
 
 /* View Button (after pseudo-element) */
 .image.thumb:after {
     content: 'View';
-    position: absolute; /* Correctly position the button inside */
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center it */
+    transform: translate(-50%, -50%); /* This ensures proper centering */
     border-radius: 0.35em;
     border: solid 3px rgba(255, 255, 255, 0.5);
     color: #fff;
@@ -1603,6 +1604,7 @@ input, select, textarea {
     text-decoration: none;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+    z-index: 2; /* Ensure it's above the overlay */
 }
 
 .image.thumb:hover:after {
@@ -1613,7 +1615,7 @@ input, select, textarea {
     opacity: 1.0;
 }
 
-/* Regular Image Styles */
+/* Image Styles */
 .image img {
     border-radius: 0.35em;
     display: block;
