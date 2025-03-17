@@ -1557,32 +1557,17 @@ input, select, textarea {
     border-radius: 0.35em;
     border: 0;
     display: inline-block;
-    position: relative;  /* Ensure the image container has relative positioning */
-    width: 100%; /* Makes the container flexible */
-    overflow: hidden; /* Ensure no content spills out */
-}
-
-/* Overlay (before pseudo-element) */
-.image:before {
-    transition: opacity 0.2s ease-in-out;
-    background: url("images/overlay.png");
-    border-radius: 0.35em;
-    content: '';
-    display: block;
-    height: 100%;
+    position: relative;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.5;
+    overflow: hidden; /* Make sure content doesn't spill */
 }
 
 /* Thumbnail Container (thumb) */
 .image.thumb {
-    position: relative;  /* Ensure the thumbnail has a relative position */
-    display: inline-block; /* Ensure it stays inline with others */
-    width: 100%; /* Ensures it's flexible */
-    height: auto; /* Adjust based on the image's size */
+    position: relative;  /* Make the container for the thumbnail positioned for absolute children */
+    width: 100%;         /* Keep the image container flexible */
+    height: 0;           /* Prevent image size from affecting button position */
+    padding-bottom: 75%;  /* Set a ratio for the aspect of the image */
 }
 
 /* View Button (after pseudo-element) */
@@ -1591,7 +1576,7 @@ input, select, textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* This ensures the button is centered */
+    transform: translate(-50%, -50%); /* Center the button */
     border-radius: 0.35em;
     border: solid 3px rgba(255, 255, 255, 0.5);
     color: #fff;
@@ -1614,29 +1599,12 @@ input, select, textarea {
     opacity: 1.0;
 }
 
-/* Show overlay on hover */
-.image.thumb:hover:before {
-    opacity: 1.0;
-}
-
-/* Regular Image Styles */
+/* Image Styles */
 .image img {
     border-radius: 0.35em;
     display: block;
-    width: 100%; /* Ensure image scales responsively */
-    height: auto; /* Maintain the aspect ratio of the image */
-}
-
-/* Left-Aligned Image */
-.image.left, .image.right {
-    display: inline-block; /* Remove float */
-    width: 40%; /* Set width for left/right images */
-    margin-bottom: 1em;
-}
-
-/* Right-Aligned Image */
-.image.right {
-    margin-left: 1.5em;
+    width: 100%; /* Image will scale to fit the container */
+    height: auto; /* Maintain aspect ratio of the image */
 }
 
 /* Full-Width Image */
