@@ -1956,7 +1956,6 @@ input, select, textarea {
     line-height: 2.75em;
     min-width: 10em;
     padding: 0 1.5em;
-    position: center;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
@@ -2031,6 +2030,7 @@ input, select, textarea {
 			.button.primary:hover {
 				background-color: #d19a00;
 				border-color: #d19a00;
+				position: center;
 			}
 
 			input[type="submit"].primary:active,
