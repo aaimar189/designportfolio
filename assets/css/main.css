@@ -1558,7 +1558,7 @@ input, select, textarea {
 		border-radius: 0.35em;
 		border: 0;
 		display: inline-block;
-		position: center;
+		position: relative;
 	}
 
 		.image:before {
