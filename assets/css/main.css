@@ -1559,15 +1559,15 @@ input, select, textarea {
     display: inline-block;
     position: relative;
     width: 100%;
-    overflow: hidden; /* Make sure content doesn't spill */
+    overflow: hidden; /* To prevent the content spilling */
 }
 
 /* Thumbnail Container (thumb) */
 .image.thumb {
-    position: relative;  /* Make the container for the thumbnail positioned for absolute children */
-    width: 100%;         /* Keep the image container flexible */
-    height: 0;           /* Prevent image size from affecting button position */
-    padding-bottom: 75%;  /* Set a ratio for the aspect of the image */
+    position: relative;  /* Make sure we can position the button inside */
+    display: inline-block;
+    width: 100%;
+    height: auto;         /* Make sure height adjusts based on content (image) */
 }
 
 /* View Button (after pseudo-element) */
@@ -1591,7 +1591,7 @@ input, select, textarea {
     text-decoration: none;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    z-index: 1; /* Ensure it's above the overlay */
+    z-index: 1; /* Ensure it’s on top of overlay */
 }
 
 /* Show the button on hover */
@@ -1599,12 +1599,17 @@ input, select, textarea {
     opacity: 1.0;
 }
 
+/* Show overlay on hover */
+.image.thumb:hover:before {
+    opacity: 1.0;
+}
+
 /* Image Styles */
 .image img {
     border-radius: 0.35em;
     display: block;
-    width: 100%; /* Image will scale to fit the container */
-    height: auto; /* Maintain aspect ratio of the image */
+    width: 100%; /* Ensure image scales responsively */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Full-Width Image */
