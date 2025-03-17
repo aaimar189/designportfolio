@@ -1566,7 +1566,6 @@ input, select, textarea {
 .image.thumb {
     position: relative; /* Ensure we can position the button inside */
     width: 100%;
-    display: inline-block; /* Ensures thumbnails are inline */
 }
 
 /* View Button (after pseudo-element) */
@@ -1590,7 +1589,7 @@ input, select, textarea {
     text-decoration: none;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    z-index: 1; /* Ensure it's on top of the image */
+    z-index: 1; /* Ensure it’s on top of the image */
 }
 
 /* Show the button on hover */
@@ -1627,7 +1626,7 @@ input, select, textarea {
     width: 100%;
 }
 
-/* Avatar (circle image) */
+/* Avatar Circle Image */
 .image.avatar {
     border-radius: 100%;
 }
@@ -1636,6 +1635,7 @@ input, select, textarea {
     border-radius: 100%;
     width: 100%;
 }
+
 
 /* List */
 
