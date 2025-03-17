@@ -1583,7 +1583,7 @@ input, select, textarea {
 				margin: -1.25em 0 0 -3em;
 				opacity: 0;
 				padding: 0 1.5em;
-				position: absolute;
+				position: center;
 				text-align: center;
 				text-decoration: none;
 				top: 50%;
