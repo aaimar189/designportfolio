@@ -1557,8 +1557,8 @@ input, select, textarea {
     border-radius: 0.35em;
     border: 0;
     display: inline-block;
-    position: relative;
-    width: 100%; /* Ensure container is flexible */
+    position: relative;  /* Ensures position context for children */
+    width: 100%; /* Make container flexible */
 }
 
 /* Overlay (before pseudo-element) */
@@ -1569,31 +1569,32 @@ input, select, textarea {
     content: '';
     display: block;
     height: 100%;
-    left: 0;
-    opacity: 0.5;
+    width: 100%;
     position: absolute;
     top: 0;
-    width: 100%;
+    left: 0;
+    opacity: 0.5;
 }
 
 /* Thumbnail Container (thumb) */
 .image.thumb {
     text-align: center;
-    position: relative; /* Ensure the parent is positioned relative */
-    display: inline-block; /* Prevents unwanted stretching */
+    position: relative; /* Keep the positioning relative for the :after pseudo-element */
+    height: 100%; /* Ensure it takes the full height of the image */
+    display: inline-block; /* Prevent unwanted stretching */
 }
 
 /* View Button (after pseudo-element) */
 .image.thumb:after {
     content: 'View';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* This ensures proper centering */
+    position: absolute;  /* Absolute positioning */
+    top: 50%;  /* Center vertically */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Offset by 50% of its own size */
     border-radius: 0.35em;
     border: solid 3px rgba(255, 255, 255, 0.5);
     color: #fff;
-    background: rgba(0, 0, 0, 0.5); /* Optional background */
+    background: rgba(0, 0, 0, 0.5); /* Optional background for visibility */
     display: inline-block;
     font-size: 0.8em;
     font-weight: 400;
@@ -1604,13 +1605,15 @@ input, select, textarea {
     text-decoration: none;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    z-index: 2; /* Ensure it's above the overlay */
+    z-index: 2;  /* Make sure button is above the overlay */
 }
 
+/* Show the button on hover */
 .image.thumb:hover:after {
     opacity: 1.0;
 }
 
+/* Show overlay on hover */
 .image.thumb:hover:before {
     opacity: 1.0;
 }
@@ -1619,13 +1622,13 @@ input, select, textarea {
 .image img {
     border-radius: 0.35em;
     display: block;
-    width: 100%; /* Ensure image scales responsively */
+    width: 100%;  /* Ensure image scales responsively */
 }
 
 /* Left-Aligned Image */
 .image.left, .image.right {
-    display: inline-block; /* Remove float and fix layout */
-    width: 40%; /* Set desired width */
+    display: inline-block;  /* Removes float */
+    width: 40%;  /* Set width as desired */
     margin-bottom: 1em;
 }
 
@@ -1650,6 +1653,7 @@ input, select, textarea {
     border-radius: 100%;
     width: 100%;
 }
+
 
 /* List */
 
