@@ -1558,8 +1558,8 @@ input, select, textarea {
     border: 0;
     display: inline-block;
     position: relative;
-    width: 200px; /* Set a fixed width for the thumbnail */
-    height: 200px; /* Set a fixed height for the thumbnail */
+    width: 400px; /* Set a fixed width for the thumbnail */
+    height: 400px; /* Set a fixed height for the thumbnail */
     overflow: hidden; /* Ensure the image doesn't spill outside the container */
 }
 
