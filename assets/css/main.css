@@ -1558,14 +1558,14 @@ input, select, textarea {
     border: 0;
     display: inline-block;
     position: relative;
-    overflow: hidden; /* Ensure content does not spill out */
-    width: 100%; /* Allow image to scale with its parent container */
+    width: 200px; /* Set a fixed width for the thumbnail */
+    height: 200px; /* Set a fixed height for the thumbnail */
+    overflow: hidden; /* Ensure the image doesn't spill outside the container */
 }
 
 /* Thumbnail Container (thumb) */
 .image.thumb {
-    position: relative; /* Ensure we can position the button inside */
-    width: 100%;
+    position: relative;
 }
 
 /* View Button (after pseudo-element) */
@@ -1574,7 +1574,7 @@ input, select, textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* This ensures the button is centered */
+    transform: translate(-50%, -50%); /* Center the button */
     border-radius: 0.35em;
     border: solid 3px rgba(255, 255, 255, 0.5);
     color: #fff;
@@ -1606,17 +1606,17 @@ input, select, textarea {
 .image img {
     border-radius: 0.35em;
     display: block;
-    width: 100%; /* Ensures image scales to fit the container */
-    height: auto; /* Maintain image aspect ratio */
-    object-fit: cover; /* Ensures image fills the container without distortion */
+    width: 100%; /* Image will scale to fill the container */
+    height: 100%; /* Ensure the image takes full height of the container */
+    object-fit: cover; /* Ensures image covers the container while maintaining aspect ratio */
 }
 
 /* Ensuring no extra space between thumbnails */
 .image.left, .image.right {
     display: inline-block;
-    width: 100%; /* Set a specific width if needed, like 40% for a 2-column layout */
+    width: 100%; /* Adjust width if necessary */
     margin-bottom: 1em;
-    padding: 0; /* Remove padding to avoid extra space */
+    padding: 0;
 }
 
 /* Full-width image (optional) */
@@ -1635,7 +1635,6 @@ input, select, textarea {
     border-radius: 100%;
     width: 100%;
 }
-
 
 /* List */
 
