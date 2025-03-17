@@ -1558,15 +1558,15 @@ input, select, textarea {
     border: 0;
     display: inline-block;
     position: relative;
-    width: 100%; /* Ensures responsiveness */
-    overflow: hidden; /* To prevent content spilling */
+    overflow: hidden; /* Ensure content does not spill out */
+    width: 100%; /* Allow image to scale with its parent container */
 }
 
 /* Thumbnail Container (thumb) */
 .image.thumb {
-    position: relative; /* Position relative to control absolute children */
-    width: 100%; /* Ensures the thumbnail container takes full width */
-    padding-top: 75%; /* Aspect ratio of 4:3, adjust as needed */
+    position: relative; /* Ensure we can position the button inside */
+    width: 100%;
+    display: inline-block; /* Ensures thumbnails are inline */
 }
 
 /* View Button (after pseudo-element) */
@@ -1590,7 +1590,7 @@ input, select, textarea {
     text-decoration: none;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    z-index: 1; /* Ensure it’s on top of the overlay */
+    z-index: 1; /* Ensure it's on top of the image */
 }
 
 /* Show the button on hover */
@@ -1607,12 +1607,20 @@ input, select, textarea {
 .image img {
     border-radius: 0.35em;
     display: block;
-    width: 100%; /* Ensure image scales responsively */
-    height: 100%; /* Maintain aspect ratio of the container */
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    width: 100%; /* Ensures image scales to fit the container */
+    height: auto; /* Maintain image aspect ratio */
+    object-fit: cover; /* Ensures image fills the container without distortion */
 }
 
-/* Full-Width Image */
+/* Ensuring no extra space between thumbnails */
+.image.left, .image.right {
+    display: inline-block;
+    width: 100%; /* Set a specific width if needed, like 40% for a 2-column layout */
+    margin-bottom: 1em;
+    padding: 0; /* Remove padding to avoid extra space */
+}
+
+/* Full-width image (optional) */
 .image.fit {
     display: block;
     margin: 0 0 2em 0;
