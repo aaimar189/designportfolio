@@ -1,22 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:400,400italic,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 
-/* Now write your styles */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Libre Baskerville', serif;
-}
-
-
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
