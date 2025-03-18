@@ -163,7 +163,7 @@
     showLessProjectsButton.addEventListener('click', function (event) {
         event.preventDefault();
         extraProjects.forEach(project => project.style.display = "none");
-        discoverMoreButton.style.display = "inline-block";
+        discoverMoreButton.style.display = "inline-block"; // Make sure Discover More returns
         showLessProjectsButton.style.display = "none";
     });
 });
