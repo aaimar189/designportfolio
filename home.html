@@ -14,6 +14,11 @@
         .extra-project {
             display: none;
         }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -41,7 +46,10 @@
                 </p>
                 <p class="extra-text">
                     Throughout my career, I've honed my skills in art direction, visual storytelling, and crafting compelling brand identities.
-                    I help businesses bring their ideas to life with impactful visuals.
+                    I help businesses bring their ideas to life with impactful visuals.  
+                    <br><br>
+                    I specialize in working with <strong>brands, startups, and agencies</strong> to craft unique and effective visual strategies.
+                    If you need design support, feel free to reach out!
                 </p>
             </div>
             <ul class="actions">
@@ -91,6 +99,30 @@
                 </div>
                 <a href="#" class="button" id="hide-projects-btn" style="display:none;">Show Less</a>
             </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form method="post" action="send_message.php">
+                <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required />
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required />
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" id="message" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Clear" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
         </section>
 
     </div>
