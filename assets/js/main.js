@@ -135,7 +135,7 @@
     extraText.style.display = "none";
     extraProjects.forEach(project => project.style.display = "none");
     showLessTextButton.style.display = "none";
-    showLessProjectsButton.style.display = "none";
+    showLessProjectsButton.style.display = "none"; // Initially hidden
 
     // Learn More Toggle
     learnMoreButton.addEventListener('click', function (event) {
@@ -156,15 +156,15 @@
     discoverMoreButton.addEventListener('click', function (event) {
         event.preventDefault();
         extraProjects.forEach(project => project.style.display = "block");
-        discoverMoreButton.style.display = "none";
-        showLessProjectsButton.style.display = "inline-block";
+        discoverMoreButton.style.display = "none"; // Hide "Discover More"
+        showLessProjectsButton.style.display = "block"; // Show "Show Less" at bottom
     });
 
     showLessProjectsButton.addEventListener('click', function (event) {
         event.preventDefault();
         extraProjects.forEach(project => project.style.display = "none");
-        discoverMoreButton.style.display = "inline-block"; // Make sure Discover More returns
-        showLessProjectsButton.style.display = "none";
+        discoverMoreButton.style.display = "inline-block"; // Restore "Discover More"
+        showLessProjectsButton.style.display = "none"; // Hide "Show Less"
     });
 });
 
