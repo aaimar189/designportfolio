@@ -1,157 +1,125 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Andrea Aimar · Freelance Graphic Designer & Visual Strategist Based in Shanghai</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" href="images/favicon.jpg" type="image/x-icon">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.image.thumb:after {
-				transition: opacity 0.2s ease-in-out;
-				border-radius: 0.35em;
-				border: solid 3px rgba(255, 255, 255, 0.5);
-				color: #fff;
-				content: attr(data-title);
-				display: inline-block;
-				font-size: 0.8em;
-				font-weight: 400;
-				left: 50%;
-				line-height: 2.25em;
-				margin: -1.25em 0 0 -3em;
-				opacity: 0;
-				padding: 0 1.5em;
-				position: absolute;
-				text-align: center;
-				text-decoration: none;
-				top: 50%;
-				white-space: nowrap;
-			}
+<head>
+    <title>Andrea Aimar · Freelance Graphic Designer & Visual Strategist Based in Shanghai</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-			.image.thumb:hover:after {
-				opacity: 1;
-			}
-		</style>
-	</head>
-	
-	<body class="is-preload">
+<body class="is-preload">
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-				<h1><strong>I am Andrea</strong>, a seasoned visual designer with branding expertise,
-					helping businesses bring their visual ideas to life.</h1>
-			</div>
-		</header>
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+            <h1><strong>I am Andrea</strong>, a seasoned visual designer with branding expertise.</h1>
+        </div>
+    </header>
 
-		<!-- Main -->
-		<div id="main">
+    <!-- Main -->
+    <div id="main">
 
-			<!-- About Section -->
-			<section id="one">
-				<header class="major">
-					<h2>Here, I share my favorite works from my design journey.
-					Hope you enjoy them, and maybe we can create something great together!</h2>
-				</header>
-				<div class="text-wrapper">
-					<p class="short-text"> I have over eight years of experience working with design agencies and international companies.
-						Throughout my career, I've honed my skills in art direction, visual storytelling, and crafting compelling brand identities.
-						My expertise spans <strong>graphic layout design, presentation mockups, and label design</strong>, helping businesses
-						bring their ideas to life with impactful visuals.</p>
-					<p class="extra-text" style="display: none;"> This part of the text will be hidden initially.</p>
-				</div>
-				<ul class="actions">
-					<li><a href="#" class="button" id="learn-more-btn">Learn More</a></li>
-					<li><a href="#" class="button" id="show-less-text-btn" style="display:none;">Show Less</a></li>
-				</ul>
-			</section>
+        <!-- About Section -->
+        <section id="one">
+            <header class="major">
+                <h2>Here, I share my favorite works from my design journey.</h2>
+            </header>
+            <div class="text-wrapper">
+                <p class="short-text">
+                    I have over eight years of experience working with design agencies and international companies.
+                </p>
+                <p class="extra-text" style="display:none;">
+                    This part of the text will be hidden initially and appears when clicking "Learn More."
+                </p>
+            </div>
+            <ul class="actions">
+                <li><a href="#" class="button" id="reveal-btn">Learn More</a></li>
+                <li><a href="#" class="button" id="see-less-btn" style="display:none;">Show Less</a></li>
+            </ul>
+        </section>
 
-			<!-- Portfolio Section -->
-			<section id="two">
-				<h2>My Selection of Favorite Works</h2>
-				<div class="row">
+        <!-- Portfolio Section -->
+        <section id="two">
+            <h2>My Selection of Favorite Works</h2>
+            <div class="row">
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="Label Design" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="Catalog Design" /></a>
+                </article>
+            </div>
 
-					<!-- Initial projects -->
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/01.jpg" class="image fit thumb" data-title="Label Design">
-							<img src="images/thumbs/01.jpg" alt="Label Design" />
-						</a>
-					</article>
+            <!-- Discover More Button -->
+            <a href="#" class="button" id="portfolio-btn">Discover More</a>
+        </section>
 
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/02.jpg" class="image fit thumb" data-title="Catalog Design">
-							<img src="images/thumbs/02.jpg" alt="Catalog Design" />
-						</a>
-					</article>
+        <!-- Extra Projects Section -->
+        <section id="two-extra" style="display:none;">
+            <div class="row">
+                <article class="col-6 col-12-xsmall work-item extra-project">
+                    <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="Brand Identity" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item extra-project">
+                    <a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="Packaging Design" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item extra-project">
+                    <a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="Product Catalog" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item extra-project">
+                    <a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="Booth Design" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item extra-project">
+                    <a href="images/fulls/07.jpg" class="image fit thumb"><img src="images/thumbs/07.jpg" alt="Magazine Layout" /></a>
+                </article>
+                <article class="col-6 col-12-xsmall work-item extra-project">
+                    <a href="images/fulls/08.jpg" class="image fit thumb"><img src="images/thumbs/08.jpg" alt="Logo Design" /></a>
+                </article>
+            </div>
 
-				</div>
+            <!-- Show Less Button at the Bottom -->
+            <a href="#" class="button" id="see-less-portfolio" style="display:none;">Show Less</a>
+        </section>
 
-				<!-- Discover More button -->
-				<a href="#" class="button" id="discover-more-btn">Discover More</a>
+    </div>
 
-				<!-- Extra Projects (Initially Hidden) -->
-				<div class="row extra-projects" style="display: none;">
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/05.jpg" class="image fit thumb" data-title="Product Catalog">
-							<img src="images/thumbs/05.jpg" alt="Product Catalog" />
-						</a>
-					</article>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Learn More Toggle
+            $('#reveal-btn').click(function (e) {
+                e.preventDefault();
+                $('.extra-text').slideDown();
+                $('#reveal-btn').hide();
+                $('#see-less-btn').show();
+            });
 
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/06.jpg" class="image fit thumb" data-title="Booth Design">
-							<img src="images/thumbs/06.jpg" alt="Booth Design" />
-						</a>
-					</article>
-				</div>
+            $('#see-less-btn').click(function (e) {
+                e.preventDefault();
+                $('.extra-text').slideUp();
+                $('#reveal-btn').show();
+                $('#see-less-btn').hide();
+            });
 
-				<!-- Show Less Button (Initially Hidden) -->
-				<a href="#" class="button" id="show-less-projects-btn" style="display:none;">Show Less</a>
-			</section>
+            // Portfolio Toggle
+            $('#portfolio-btn').click(function (e) {
+                e.preventDefault();
+                $('#two-extra').fadeIn();
+                $('#portfolio-btn').hide();
+                $('#see-less-portfolio').show();
+            });
 
-			<!-- Contact Section -->
-			<section id="three">
-				<h2>Get In Touch</h2>
-				<p>Please fill out the form below so we can get to know each other better and see if we'd be a great fit to work together!</p>
-			</section>
+            $('#see-less-portfolio').click(function (e) {
+                e.preventDefault();
+                $('#two-extra').fadeOut();
+                $('#portfolio-btn').show();
+                $('#see-less-portfolio').hide();
+            });
+        });
+    </script>
 
-		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script>
-			$(document).ready(function () {
-				// Learn More / Show Less functionality
-				$('#learn-more-btn').click(function (e) {
-					e.preventDefault();
-					$('.extra-text').slideDown();
-					$('#learn-more-btn').hide();
-					$('#show-less-text-btn').show();
-				});
-
-				$('#show-less-text-btn').click(function (e) {
-					e.preventDefault();
-					$('.extra-text').slideUp();
-					$('#learn-more-btn').show();
-					$('#show-less-text-btn').hide();
-				});
-
-				// Discover More / Show Less for projects
-				$('#discover-more-btn').click(function (e) {
-					e.preventDefault();
-					$('.extra-projects').slideDown();
-					$('#discover-more-btn').hide();
-					$('#show-less-projects-btn').show();
-				});
-
-				$('#show-less-projects-btn').click(function (e) {
-					e.preventDefault();
-					$('.extra-projects').slideUp();
-					$('#discover-more-btn').show();
-					$('#show-less-projects-btn').hide();
-				});
-			});
-		</script>
-
-	</body>
+</body>
 </html>
