@@ -116,18 +116,7 @@
         $(this).hide(); // Hide the button after use
     });
 
-     // See Less Button Click
-    $seeLessBtn.click(function(e) {
-        e.preventDefault();
-        
-        console.log("See Less clicked.");
-        $extraProjects.fadeOut(400, function() {
-            console.log("Extra projects now hidden.");
-        });
-
-        $seeLessBtn.hide(); // Hide See Less button after use
-        $discoverMoreBtn.show(); // Show Discover More button
-    });
+     
 });
 
 
