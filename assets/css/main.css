@@ -1551,8 +1551,8 @@ input, select, textarea {
 /* Thumbnail Container (thumb) */
 .image.thumb {
     position: relative;
-    width: 50%; 
-    max-width: 200px; 
+    width: 100%; 
+    max-width: 300px; 
     display: inline-block;
     aspect-ratio: 1 / 1; /* Ensures square shape */
 }
