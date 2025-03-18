@@ -1,181 +1,250 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>Andrea Aimar · Freelance Graphic Designer & Visual Strategist Based in Shanghai</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        .extra-text {
-            display: none;
-        }
+	<head>
+		<title>Andrea Aimar · Freelance Graphic Designer & Visual Strategist Based in Shanghai</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-        .extra-project {
-            display: none;
-        }
+		<link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+		
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.image.thumb:after {
+				-moz-transition: opacity 0.2s ease-in-out;
+				-webkit-transition: opacity 0.2s ease-in-out;
+				-ms-transition: opacity 0.2s ease-in-out;
+				transition: opacity 0.2s ease-in-out;
+				border-radius: 0.35em;
+				border: solid 3px rgba(255, 255, 255, 0.5);
+				color: #fff;
+				content: attr(data-title);
+				display: inline-block;
+				font-size: 0.8em;
+				font-weight: 400;
+				left: 50%;
+				line-height: 2.25em;
+				margin: -1.25em 0 0 -3em;
+				opacity: 0;
+				padding: 0 1.5em;
+				position: absolute;
+				text-align: center;
+				text-decoration: none;
+				top: 50%;
+				white-space: nowrap;
+			}
 
-        .actions {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
+			.image.thumb:hover:after {
+				opacity: 1;
+			}
+		</style>
+	</head>
+	
+	<body class="is-preload">
 
-        #see-less-btn {
-            margin-left: 0; /* Align with the left side */
-        }
-    </style>
-</head>
-<body class="is-preload">
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<h1><strong>I am Andrea</strong>, a seasoned visual designer with branding expertise,
+					helping businesses bring their visual ideas to life.</h1>
+			</div>
+		</header>
 
-    <!-- Header -->
-    <header id="header">
-        <div class="inner">
-            <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-            <h1><strong>I am Andrea</strong>, a seasoned visual designer with branding expertise, helping businesses bring their visual ideas to life.</h1>
-        </div>
-    </header>
+		<!-- Main -->
+		<div id="main">
 
-    <!-- Main -->
-    <div id="main">
+			<!-- One -->
+			<section id="one">
+				<header class="major">
+					<h2>Here, I share my favorite works from my design journey.
+					Hope you enjoy them, and maybe we can create something great together!</h2>
+				</header>
+				<div class="text-wrapper">
+					<p class="short-text"> I have over eight years of experience working with design agencies and international companies.
+						Throughout my career, I've honed my skills in art direction, visual storytelling, and crafting compelling brand identities.
+						My expertise spans <strong>graphic layout design, presentation mockups, and label design</strong>, helping businesses
+						bring their ideas to life with impactful visuals.</p>
+					<p class="extra-text"> This part of the text will be hidden initially.</p>
+				</div>
+				<ul class="actions">
+					<li><a href="#" class="button" id="reveal-btn">Learn More</a></li>
+					<li><a href="#" class="button" id="see-less-btn" style="display:none;">See Less</a></li>
+				</ul>
+			</section>
 
-        <!-- Section One -->
-        <section id="one">
-            <header class="major">
-                <h2>Here, I share my favorite works from my design journey. Hope you enjoy them!</h2>
-            </header>
-            <div class="text-wrapper">
-                <p>
-                    I have over eight years of experience working with design agencies and international companies.
-                    My expertise spans <strong>graphic layout design, presentation mockups, and label design</strong>.
-                </p>
-                <p class="extra-text">
-                    Throughout my career, I've honed my skills in art direction, visual storytelling, and crafting compelling brand identities.
-                    I help businesses bring their ideas to life with impactful visuals.  
-                    <br><br>
-                    I specialize in working with <strong>brands, startups, and agencies</strong> to craft unique and effective visual strategies.
-                    If you need design support, feel free to reach out!
-                </p>
-            </div>
-            <ul class="actions">
-                <li><a href="#" class="button" id="reveal-btn">Learn More</a></li>
-                <li><a href="#" class="button" id="see-less-btn" style="display:none;">Show Less</a></li>
-            </ul>
-        </section>
+			<!-- Two -->
+			<section id="two">
+				<h2>My Selection of Favorite Works</h2>
+				<div class="row">
 
-        <!-- Section Two -->
-        <section id="two">
-            <h2>My Selection of Favorite Works</h2>
-            <div class="row">
-                <article class="col-6 col-12-xsmall work-item">
-                    <a href="images/fulls/01.jpg" class="image fit thumb">
-                        <img src="images/thumbs/01.jpg" alt="Label Design" />
-                    </a>
-                </article>
-                <article class="col-6 col-12-xsmall work-item">
-                    <a href="images/fulls/02.jpg" class="image fit thumb">
-                        <img src="images/thumbs/02.jpg" alt="Catalog Design" />
-                    </a>
-                </article>
-            </div>
-            <a href="#" class="button" id="portfolio-btn">Discover More</a>
-            <div class="extra-projects">
-                <div class="row">
-                    <article class="col-6 col-12-xsmall work-item extra-project">
-                        <a href="images/fulls/03.jpg" class="image fit thumb">
-                            <img src="images/thumbs/03.jpg" alt="Datasheet Creation" />
-                        </a>
-                    </article>
-                    <article class="col-6 col-12-xsmall work-item extra-project">
-                        <a href="images/fulls/04.jpg" class="image fit thumb">
-                            <img src="images/thumbs/04.jpg" alt="Packaging Art Direction" />
-                        </a>
-                    </article>
-                    <article class="col-6 col-12-xsmall work-item extra-project">
-                        <a href="images/fulls/05.jpg" class="image fit thumb">
-                            <img src="images/thumbs/05.jpg" alt="Product Catalog" />
-                        </a>
-                    </article>
-                    <article class="col-6 col-12-xsmall work-item extra-project">
-                        <a href="images/fulls/06.jpg" class="image fit thumb">
-                            <img src="images/thumbs/06.jpg" alt="Booth Design" />
-                        </a>
-                    </article>
-                </div>
-                <a href="#" class="button" id="hide-projects-btn" style="display:none;">Show Less</a>
-            </div>
-        </section>
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="images/fulls/01.jpg" class="image fit thumb" data-lightbox="work-1" data-title="Label Design">
+							<img src="images/thumbs/01.jpg" alt="Label Design" />
+						</a>
+						<a href="images/fulls/01b.jpg" class="image fit thumb" data-lightbox="work-1" data-title="Label Design - Alternative View"></a>
+					</article>
 
-        <!-- Contact Form -->
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <form method="post" action="send_message.php">
-                <div class="row gtr-uniform">
-                    <div class="col-6 col-12-xsmall">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required />
-                    </div>
-                    <div class="col-6 col-12-xsmall">
-                        <input type="email" name="email" id="email" placeholder="Your Email" required />
-                    </div>
-                    <div class="col-12">
-                        <textarea name="message" id="message" placeholder="Your Message" rows="4" required></textarea>
-                    </div>
-                    <div class="col-12">
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Clear" /></li>
-                        </ul>
-                    </div>
-                </div>
-            </form>
-        </section>
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="images/fulls/02.jpg" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design">
+							<img src="images/thumbs/02.jpg" alt="Catalog Design" />
+						</a>
+						<a href="images/fulls/02b.jpg" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design - Alternative View"></a>
+					</article>
 
-    </div>
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="images/fulls/03.jpg" class="image fit thumb" data-lightbox="work-3" data-title="Datasheet Creation">
+							<img src="images/thumbs/03.jpg" alt="Datasheet Creation" />
+						</a>
+					</article>
 
-    <!-- Scripts -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var revealBtn = document.getElementById("reveal-btn");
-            var seeLessBtn = document.getElementById("see-less-btn");
-            var extraText = document.querySelector(".extra-text");
+					<article class="col-6 col-12-xsmall work-item">
+						<a href="images/fulls/04.jpg" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction">
+							<img src="images/thumbs/04.jpg" alt="Packaging Art Direction" />
+						</a>
+						<a href="images/fulls/04b.jpg" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction - Alternative View"></a>
+					</article>
+				</div>
+				<a href="#" class="button" id="portfolio-btn">Discover More</a>
+			</section>
 
-            revealBtn.addEventListener("click", function(event) {
-                event.preventDefault();
-                extraText.style.display = "block";
-                revealBtn.style.display = "none";
-                seeLessBtn.style.display = "inline-block";
-            });
+			<!-- Hidden Section for Extra Projects -->
+			<section id="two">
+				
+				<div class="row">
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/05.jpg" class="image fit thumb" data-lightbox="work-5" data-title="Product Catalog">
+							<img src="images/thumbs/05.jpg" alt="Product Catalog" />
+						</a>
+						<a href="images/fulls/05b.jpg" class="image fit thumb" data-lightbox="work-5" data-title="Product Catalog - Alternative View"></a>
+					</article>
 
-            seeLessBtn.addEventListener("click", function(event) {
-                event.preventDefault();
-                extraText.style.display = "none";
-                revealBtn.style.display = "inline-block";
-                seeLessBtn.style.display = "none";
-            });
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/06.jpg" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design">
+							<img src="images/thumbs/06.jpg" alt="Booth Design" />
+						</a>
+						<a href="images/fulls/06b.jpg" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design - Alternative View"></a>
+					</article>
 
-            var portfolioBtn = document.getElementById("portfolio-btn");
-            var hideProjectsBtn = document.getElementById("hide-projects-btn");
-            var extraProjects = document.querySelectorAll(".extra-project");
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/07.jpg" class="image fit thumb" data-lightbox="work-7" data-title="Label Design">
+							<img src="images/thumbs/07.jpg" alt="Label Design" />
+						</a>
+						<a href="images/fulls/07b.jpg" class="image fit thumb" data-lightbox="work-7" data-title="Label Design - Alternative View"></a>
+					</article>
 
-            portfolioBtn.addEventListener("click", function(event) {
-                event.preventDefault();
-                extraProjects.forEach(function(project) {
-                    project.style.display = "block";
-                });
-                portfolioBtn.style.display = "none";
-                hideProjectsBtn.style.display = "inline-block";
-            });
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/08.jpg" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design">
+							<img src="images/thumbs/08.jpg" alt="E-commerce Design" />
+						</a>
+						<a href="images/fulls/08b.jpg" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design - Alternative View"></a>
+					</article>
 
-            hideProjectsBtn.addEventListener("click", function(event) {
-                event.preventDefault();
-                extraProjects.forEach(function(project) {
-                    project.style.display = "none";
-                });
-                portfolioBtn.style.display = "inline-block";
-                hideProjectsBtn.style.display = "none";
-            });
-        });
-    </script>
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/09.jpg" class="image fit thumb" data-lightbox="work-9" data-title="Label Design">
+							<img src="images/thumbs/09.jpg" alt="Label Design" />
+						</a>
+						<a href="images/fulls/09b.jpg" class="image fit thumb" data-lightbox="work-9" data-title="Label Design - Alternative View"></a>
+					</article>
 
-</body>
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/10.jpg" class="image fit thumb" data-lightbox="work-10" data-title="E-commerce Design">
+							<img src="images/thumbs/10.jpg" alt="E-commerce Design" />
+						</a>
+						<a href="images/fulls/10b.jpg" class="image fit thumb" data-lightbox="work-10" data-title="E-commerce Design - Alternative View"></a>
+					</article>
+				</div>
+			</section>
+
+			<!-- Three -->
+			<section id="three">
+				<h2>Get In Touch</h2>
+				<p> Please fill out the form below so we can get to know each other better and see if we'd be a great fit to work together!</p>
+				<div class="row">
+					<div class="col-8 col-12-small">
+						<form method="post" action="https://formsubmit.co/andreaaimar07@gmail.com">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+								<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+								<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>	
+					</div>
+					<div class="col-4 col-12-small">
+						<ul class="labeled-icons">
+							<li>
+								<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+								South Xiangyang Road, 489<br />
+								Shanghai, 200000<br />
+								China
+							</li>
+							<li>
+								<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+								0086-156-18607421
+							</li>
+							<li>
+								<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+								<a href="#">info@designedbyandrea.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="instagram.com/designedbyandrea" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="mailto:andreaaimar07@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Andrea Aimar 2025 Shanghai</li><li>Photography: <a href="http://aaimarphoto.com/">ANDREA AIMAR PHOTOGRAPHER</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			$(document).ready(function () {
+				// Initialize lightbox for all images initially
+				initializeLightbox();
+
+				// Handle "Discover More" button click
+				$('#portfolio-btn').click(function (e) {
+					e.preventDefault(); // Prevent default link behavior
+
+					// Show hidden projects
+					$('.extra-project').fadeIn();
+
+					// Destroy the existing poptrox instance
+					$('.image.fit.thumb').data('poptrox', null);
+
+					// Reinitialize lightbox for all images (including extra projects)
+					initializeLightbox();
+
+					// Hide the "Discover More" button after clicking
+					$(this).hide();
+				});
+
+				// Function to initialize lightbox
+				function initializeLightbox() {
+					$('.image.fit.thumb').poptrox({
+						usePopupCaption: true, // Show captions
+						usePopupNav: true, // Enable navigation between images
+					});
+				}
+			});
+		</script>
+	</body>
 </html>
