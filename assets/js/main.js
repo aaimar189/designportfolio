@@ -71,9 +71,10 @@
     }
 
     // Portfolio Section with Lightbox Gallery (Poptrox)
-    $(document).ready(function() {
+   $(document).ready(function() {
     var $gallery = $('#two .row'); // Main section
     var $discoverMoreBtn = $('#portfolio-btn');
+    var $seeLessBtn = $('#see-less-btn'); // Selecting "See Less" button
     var $extraProjects = $('.extra-project');
 
     function initPoptrox() {
@@ -103,6 +104,9 @@
     // Initial Poptrox Setup
     initPoptrox();
 
+    // Initially hide the "See Less" button
+    $seeLessBtn.hide();
+
     // Discover More Button Click
     $discoverMoreBtn.click(function(e) {
         e.preventDefault();
@@ -113,10 +117,22 @@
             initPoptrox(); // Reinitialize Poptrox after showing the extra projects
         });
 
-        $(this).hide(); // Hide the button after use
+        $(this).hide(); // Hide "Discover More" button
+        $seeLessBtn.show(); // Show "See Less" button
     });
 
-     
+    // See Less Button Click
+    $seeLessBtn.click(function(e) {
+        e.preventDefault();
+        
+        console.log("See Less clicked.");
+        $extraProjects.fadeOut(400, function() {
+            console.log("Extra projects now hidden.");
+        });
+
+        $seeLessBtn.hide(); // Hide "See Less" button
+        $discoverMoreBtn.show(); // Show "Discover More" button
+    });
 });
 
 
