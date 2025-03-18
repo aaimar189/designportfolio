@@ -137,9 +137,11 @@
             button.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
         });
 
+
+        
         // Portfolio Toggle (Full Portfolio and Hide/Show Projects)
         var portfolioButton = document.getElementById('portfolio-btn');
-        var seeLessButton = document.getElementById('see-less-btn');
+
         
         portfolioButton.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default link behavior
@@ -151,6 +153,10 @@
                 } else {
                     project.style.display = "none"; // Hide them again
                 }
+
+        // Update button text
+            button.textContent = extraText.classList.contains("show") ? "Show Less" : "Discover More";
+                
             });
 
             // Toggle button text
