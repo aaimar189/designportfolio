@@ -122,55 +122,49 @@
 
 
     // Learn More Toggle Text functionality
-    document.addEventListener("DOMContentLoaded", function() {
-    var revealButton = document.getElementById('reveal-btn');
+    document.addEventListener("DOMContentLoaded", function () {
+    var learnMoreButton = document.getElementById('learn-more-btn');
+    var showLessTextButton = document.getElementById('show-less-text-btn');
     var extraText = document.querySelector('.extra-text');
-    
-    var portfolioButton = document.getElementById('portfolio-btn');
-    var seeLessButton = document.getElementById('see-less-btn'); // Define this button in HTML
+
+    var discoverMoreButton = document.getElementById('discover-more-btn');
+    var showLessProjectsButton = document.getElementById('show-less-projects-btn');
     var extraProjects = document.querySelectorAll('.extra-project');
 
     // Ensure initial states
-    extraText.classList.remove("show");
-    extraProjects.forEach(function(project) {
-        project.style.display = "none";
-    });
-    seeLessButton.style.display = "none"; // Initially hide "See Less"
+    extraText.style.display = "none";
+    extraProjects.forEach(project => project.style.display = "none");
+    showLessTextButton.style.display = "none";
+    showLessProjectsButton.style.display = "none";
 
     // Learn More Toggle
-    revealButton.addEventListener('click', function(event) {
-        event.preventDefault();  
-        extraText.classList.toggle("show");
-
-        // Update button text based on visibility
-        revealButton.textContent = extraText.classList.contains("show") ? "Show Less" : "Learn More";
+    learnMoreButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        extraText.style.display = "block";
+        learnMoreButton.style.display = "none";
+        showLessTextButton.style.display = "inline-block";
     });
 
-    // Portfolio Toggle
-    portfolioButton.addEventListener('click', function(event) {
-        event.preventDefault();  
-
-        let isHidden = Array.from(extraProjects).every(project => project.style.display === "none");
-
-        extraProjects.forEach(function(project) {
-            project.style.display = isHidden ? "block" : "none"; 
-        });
-
-        // Toggle button text
-        portfolioButton.textContent = isHidden ? "Show Less" : "Full Portfolio";
-        seeLessButton.style.display = isHidden ? "inline-block" : "none";
+    showLessTextButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        extraText.style.display = "none";
+        learnMoreButton.style.display = "inline-block";
+        showLessTextButton.style.display = "none";
     });
 
-    // See Less Functionality
-    seeLessButton.addEventListener('click', function(event) {
-        event.preventDefault();  
+    // Discover More Toggle
+    discoverMoreButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        extraProjects.forEach(project => project.style.display = "block");
+        discoverMoreButton.style.display = "none";
+        showLessProjectsButton.style.display = "inline-block";
+    });
 
-        extraProjects.forEach(function(project) {
-            project.style.display = "none";
-        });
-
-        portfolioButton.textContent = "Full Portfolio";
-        seeLessButton.style.display = "none"; 
+    showLessProjectsButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        extraProjects.forEach(project => project.style.display = "none");
+        discoverMoreButton.style.display = "inline-block";
+        showLessProjectsButton.style.display = "none";
     });
 });
 
