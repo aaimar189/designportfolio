@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+		<link rel="icon" href="images/favicon.webp" type="image/x-icon">
 		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
@@ -23,18 +23,40 @@
 				font-weight: 400;
 				left: 50%;
 				line-height: 2.25em;
-				margin: -1.25em 0 0 -3em;
 				opacity: 0;
 				padding: 0 1.5em;
 				position: absolute;
 				text-align: center;
 				text-decoration: none;
 				top: 50%;
+				transform: translate(-50%, -50%);
 				white-space: nowrap;
 			}
-
 			.image.thumb:hover:after {
 				opacity: 1;
+			}
+
+			/* Add styles for consistent image heights */
+			#two .work-item {
+				margin-bottom: 2em;
+			}
+
+			#two .image.fit.thumb {
+				display: block;
+				position: relative;
+				height: 300px; /* Set fixed height */
+				overflow: hidden;
+			}
+
+			#two .image.fit.thumb img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover; /* This ensures images cover the area while maintaining aspect ratio */
+			}
+
+			/* Hide the second image in each work-item */
+			#two .work-item a.image.fit.thumb:not(:first-child) {
+				display: none;
 			}
 		</style>
 	</head>
@@ -44,7 +66,7 @@
 		<!-- Header -->
 		<header id="header">
 			<div class="inner">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<a href="#" class="image avatar"><img src="images/avatar.webp" alt="" /></a>
 				<h1><strong>I am Andrea</strong>, a seasoned visual designer with branding expertise,
 					helping businesses bring their visual ideas to life.</h1>
 			</div>
@@ -76,82 +98,79 @@
 			<section id="two">
 				<h2>My Selection of Favorite Works</h2>
 				<div class="row">
-
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/01.jpg" class="image fit thumb" data-lightbox="work-1" data-title="Label Design">
-							<img src="images/thumbs/01.jpg" alt="Label Design" />
+						<a href="images/fulls/01.webp" class="image fit thumb" data-lightbox="work-1" data-title="Label Design">
+							<img src="images/thumbs/01.webp" alt="Label Design" />
 						</a>
-						<a href="images/fulls/01b.jpg" class="image fit thumb" data-lightbox="work-1" data-title="Label Design - Alternative View"></a>
+						<a href="images/fulls/01b.webp" class="image fit thumb" data-lightbox="work-1" data-title="Label Design - Alternative View"></a>
 					</article>
 
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/02.jpg" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design">
-							<img src="images/thumbs/02.jpg" alt="Catalog Design" />
+						<a href="images/fulls/02.webp" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design">
+							<img src="images/thumbs/02.webp" alt="Catalog Design" />
 						</a>
-						<a href="images/fulls/02b.jpg" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design - Alternative View"></a>
+						<a href="images/fulls/02b.webp" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design - Alternative View"></a>
 					</article>
 
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/03.jpg" class="image fit thumb" data-lightbox="work-3" data-title="Datasheet Creation">
-							<img src="images/thumbs/03.jpg" alt="Datasheet Creation" />
+						<a href="images/fulls/03.webp" class="image fit thumb" data-lightbox="work-3" data-title="Datasheet Creation">
+							<img src="images/thumbs/03.webp" alt="Datasheet Creation" />
 						</a>
 					</article>
 
 					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/04.jpg" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction">
-							<img src="images/thumbs/04.jpg" alt="Packaging Art Direction" />
+						<a href="images/fulls/04.webp" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction">
+							<img src="images/thumbs/04.webp" alt="Packaging Art Direction" />
 						</a>
-						<a href="images/fulls/04b.jpg" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction - Alternative View"></a>
+						<a href="images/fulls/04b.webp" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction - Alternative View"></a>
+					</article>
+
+					<!-- Extra Projects -->
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/05.webp" class="image fit thumb" data-lightbox="work-5" data-title="Product Catalog">
+							<img src="images/thumbs/05.webp" alt="Product Catalog" />
+						</a>
+						<a href="images/fulls/05b.webp" class="image fit thumb" data-lightbox="work-5" data-title="Product Catalog - Alternative View"></a>
+					</article>
+
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/06.webp" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design">
+							<img src="images/thumbs/06.webp" alt="Booth Design" />
+						</a>
+						<a href="images/fulls/06b.webp" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design - Alternative View"></a>
+					</article>
+
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/07.webp" class="image fit thumb" data-lightbox="work-7" data-title="Label Design">
+							<img src="images/thumbs/07.webp" alt="Label Design" />
+						</a>
+						<a href="images/fulls/07b.webp" class="image fit thumb" data-lightbox="work-7" data-title="Label Design - Alternative View"></a>
+					</article>
+
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/08.webp" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design">
+							<img src="images/thumbs/08.webp" alt="E-commerce Design" />
+						</a>
+						<a href="images/fulls/08b.webp" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design - Alternative View"></a>
+					</article>
+
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/09.webp" class="image fit thumb" data-lightbox="work-9" data-title="Label Design">
+							<img src="images/thumbs/09.webp" alt="Label Design" />
+						</a>
+						<a href="images/fulls/09b.webp" class="image fit thumb" data-lightbox="work-9" data-title="Label Design - Alternative View"></a>
+					</article>
+
+					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
+						<a href="images/fulls/10.webp" class="image fit thumb" data-lightbox="work-10" data-title="E-commerce Design">
+							<img src="images/thumbs/10.webp" alt="E-commerce Design" />
+						</a>
+						<a href="images/fulls/10b.webp" class="image fit thumb" data-lightbox="work-10" data-title="E-commerce Design - Alternative View"></a>
 					</article>
 				</div>
-				<a href="#" class="button" id="portfolio-btn">Discover More</a>
-			</section>
-
-			<!-- Hidden Section for Extra Projects -->
-			<section id="two">
-				
-				<div class="row">
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/05.jpg" class="image fit thumb" data-lightbox="work-5" data-title="Product Catalog">
-							<img src="images/thumbs/05.jpg" alt="Product Catalog" />
-						</a>
-						<a href="images/fulls/05b.jpg" class="image fit thumb" data-lightbox="work-5" data-title="Product Catalog - Alternative View"></a>
-					</article>
-
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/06.jpg" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design">
-							<img src="images/thumbs/06.jpg" alt="Booth Design" />
-						</a>
-						<a href="images/fulls/06b.jpg" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design - Alternative View"></a>
-					</article>
-
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/07.jpg" class="image fit thumb" data-lightbox="work-7" data-title="Label Design">
-							<img src="images/thumbs/07.jpg" alt="Label Design" />
-						</a>
-						<a href="images/fulls/07b.jpg" class="image fit thumb" data-lightbox="work-7" data-title="Label Design - Alternative View"></a>
-					</article>
-
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/08.jpg" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design">
-							<img src="images/thumbs/08.jpg" alt="E-commerce Design" />
-						</a>
-						<a href="images/fulls/08b.jpg" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design - Alternative View"></a>
-					</article>
-
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/09.jpg" class="image fit thumb" data-lightbox="work-9" data-title="Label Design">
-							<img src="images/thumbs/09.jpg" alt="Label Design" />
-						</a>
-						<a href="images/fulls/09b.jpg" class="image fit thumb" data-lightbox="work-9" data-title="Label Design - Alternative View"></a>
-					</article>
-
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/10.jpg" class="image fit thumb" data-lightbox="work-10" data-title="E-commerce Design">
-							<img src="images/thumbs/10.jpg" alt="E-commerce Design" />
-						</a>
-						<a href="images/fulls/10b.jpg" class="image fit thumb" data-lightbox="work-10" data-title="E-commerce Design - Alternative View"></a>
-					</article>
+				<div class="button-container" style="text-align: left; margin-bottom: 2em;">
+					<a href="#" class="button" id="portfolio-btn">Discover More</a>
+					<a href="#" class="button" id="show-less-btn" style="display:none;">Show Less</a>
 				</div>
 			</section>
 
@@ -233,7 +252,26 @@
 					// Reinitialize lightbox for all images (including extra projects)
 					initializeLightbox();
 
-					// Hide the "Discover More" button after clicking
+					// Hide the "Discover More" button and show "Show Less" button
+					$(this).hide();
+					$('#show-less-btn').show();
+				});
+
+				// Handle "Show Less" button click
+				$('#show-less-btn').click(function (e) {
+					e.preventDefault(); // Prevent default link behavior
+
+					// Hide extra projects
+					$('.extra-project').fadeOut();
+
+					// Destroy the existing poptrox instance
+					$('.image.fit.thumb').data('poptrox', null);
+
+					// Reinitialize lightbox for visible images only
+					initializeLightbox();
+
+					// Show the "Discover More" button and hide "Show Less" button
+					$('#portfolio-btn').show();
 					$(this).hide();
 				});
 
@@ -246,5 +284,7 @@
 				}
 			});
 		</script>
+  
+
 	</body>
 </html>
