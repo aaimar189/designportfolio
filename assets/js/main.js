@@ -153,14 +153,7 @@
                 }
             });
 
-            // Toggle button text
-            if (portfolioButton.textContent === "Full Portfolio") {
-                portfolioButton.textContent = "Show Less";
-                seeLessButton.style.display = "inline-block"; // Show "See Less" button
-            } else {
-                portfolioButton.textContent = "Full Portfolio";
-                seeLessButton.style.display = "none"; // Hide "See Less" button
-            }
+         
         });
 
         // See Less functionality (Hide extra projects and show Full Portfolio button)
