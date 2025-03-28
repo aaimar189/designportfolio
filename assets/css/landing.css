@@ -43,22 +43,22 @@ body, html {
 /* Keyframes for background images */
 @keyframes slideshow {
     0% {
-        background-image: url('/images/background-01.png');
+        background-image: url('/images/background-01.webp');
         opacity: 1;
     }
     33% {
-        background-image: url('/images/background-02.png');
+        background-image: url('/images/background-02.webp');
         opacity: 1;
     }
     50% {
         opacity: 0;
     }
     66% {
-        background-image: url('/images/background-03.png');
+        background-image: url('/images/background-03.webp');
         opacity: 1;
     }
     100% {
-        background-image: url('/images/background-01.png');
+        background-image: url('/images/background-01.webp');
         opacity: 1;
     }
 }
