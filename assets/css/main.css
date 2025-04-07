@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
-
-
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -110,7 +108,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		color: #787878;
 		font-family: 'Heebo', sans-serif;
-		line-height: 1em;
+		line-height: 1.4em;
 		margin: 0 0 1em 0;
 	}
 
@@ -121,7 +119,7 @@ input, select, textarea {
 
 	h1 {
 		font-size: 2em;
-		font-weight: 900;
+		font-weight: 700;
 		line-height: 1.5em;
 	}
 
