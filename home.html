@@ -7,57 +7,7 @@
 
 		<link rel="icon" href="images/favicon.webp" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css"/>
-		<style>
-			.image.thumb:after {
-				-moz-transition: opacity 0.2s ease-in-out;
-				-webkit-transition: opacity 0.2s ease-in-out;
-				-ms-transition: opacity 0.2s ease-in-out;
-				transition: opacity 0.2s ease-in-out;
-				border-radius: 0.35em;
-				border: solid 3px rgba(255, 255, 255, 0.5);
-				color: #fff;
-				content: attr(data-title);
-				display: inline-block;
-				font-size: 0.8em;
-				font-weight: 400;
-				left: 50%;
-				line-height: 2.25em;
-				opacity: 0;
-				padding: 0 1.5em;
-				position: absolute;
-				text-align: center;
-				text-decoration: none;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				white-space: nowrap;
-			}
-			.image.thumb:hover:after {
-				opacity: 1;
-			}
-
-			/* Add styles for consistent image heights */
-			#two .work-item {
-				margin-bottom: 2em;
-			}
-
-			#two .image.fit.thumb {
-				display: block;
-				position: relative;
-				height: 300px; /* Set fixed height */
-				overflow: hidden;
-			}
-
-			#two .image.fit.thumb img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover; /* This ensures images cover the area while maintaining aspect ratio */
-			}
-
-			/* Hide the second image in each work-item */
-			#two .work-item a.image.fit.thumb:not(:first-child) {
-				display: none;
-			}
-		</style>
+			
 	</head>
 	<body class="is-preload">
 
