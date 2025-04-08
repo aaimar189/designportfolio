@@ -2572,79 +2572,74 @@ input, select, textarea {
 					}
 
 		/* Main */
-
-			#main {
-				margin: 0;
-				padding: 6em 4em;
-				width: 100%;
-			}
-
-	}
+#main {
+    margin-left: 35%; /* Ensure content starts after the fixed header */
+    margin-top: 8em;  /* Push the content below the fixed header */
+    padding: 6em 4em; /* Keep padding as per design */
+    width: 100%;      /* Ensure full width */
+}
 
 /* Small */
+@media screen and (max-width: 736px) {
 
-	@media screen and (max-width: 736px) {
+    /* Basic */
+    h1 {
+        font-size: 1.5em;
+    }
 
-		/* Basic */
+    h2 {
+        font-size: 1.2em;
+    }
 
-			h1 {
-				font-size: 1.5em;
-			}
+    h3 {
+        font-size: 1em;
+    }
 
-			h2 {
-				font-size: 1.2em;
-			}
+    /* Section/Article */
+    section.special, article.special {
+        text-align: center;
+    }
 
-			h3 {
-				font-size: 1em;
-			}
+    header.major h2 {
+        font-size: 1.35em;
+    }
 
-		/* Section/Article */
+    /* List */
+    ul.labeled-icons li {
+        padding-left: 2em;
+    }
 
-			section.special, article.special {
-				text-align: center;
-			}
+    ul.labeled-icons li h3 {
+        line-height: 1.75em;
+    }
 
-			header.major h2 {
-				font-size: 1.35em;
-			}
+    /* Header */
+    #header {
+        padding: 2.25em 1.5em;
+    }
 
-		/* List */
+    #header h1 {
+        font-size: 1.35em;
+    }
 
-			ul.labeled-icons li {
-				padding-left: 2em;
-			}
+    /* Footer */
+    #footer {
+        padding: 2.25em 1.5em;
+    }
 
-				ul.labeled-icons li h3 {
-					line-height: 1.75em;
-				}
+    /* Main */
+    #main {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-top: 0;  /* No top margin for small screens */
+        padding: 2.25em 1.5em 0.25em 1.5em; /* Adjust padding */
+    }
 
-		/* Header */
+    #main > section {
+        margin: 2.25em 0 0 0;  /* Maintain margin */
+        padding: 2.25em 0 0 0; /* Adjust padding */
+    }
+}
 
-			#header {
-				padding: 2.25em 1.5em;
-			}
-
-				#header h1 {
-					font-size: 1.35em;
-				}
-
-		/* Footer */
-
-			#footer {
-				padding: 2.25em 1.5em;
-			}
-
-		/* Main */
-
-			#main {
-				padding: 2.25em 1.5em 0.25em 1.5em;
-			}
-
-				#main > section {
-					margin: 2.25em 0 0 0;
-					padding: 2.25em 0 0 0;
-				}
 
 		/* Poptrox */
 
