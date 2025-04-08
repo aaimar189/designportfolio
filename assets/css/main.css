@@ -2049,6 +2049,7 @@ input, select, textarea {
 		}
 
 
+
 /* Header */
 #header {
     display: flex;
@@ -2140,7 +2141,7 @@ input, select, textarea {
     max-width: calc(100% - 35%);
     padding: 8em 4em 4em 4em;
     width: auto;
-    padding-top: 10em; /* Add extra space to avoid header overlap */
+    padding-top: 12em; /* Ensure space for header */
 }
 
 #main > section {
@@ -2283,7 +2284,7 @@ body.is-touch .poptrox-popup .closer {
         margin-left: 30%;
         width: calc(100% - 30%);
         padding: 6em 3em 3em 3em;
-        padding-top: 8em; /* Add extra space for header */
+        padding-top: 10em; /* Add extra space for header */
     }
 }
 
@@ -2306,7 +2307,7 @@ body.is-touch .poptrox-popup .closer {
         margin-top: 8em;
         padding: 6em 4em;
         width: 100%;
-        padding-top: 8em; /* Ensure space for the header */
+        padding-top: 10em; /* Ensure space for the header */
     }
 }
 
@@ -2332,7 +2333,7 @@ body.is-touch .poptrox-popup .closer {
         margin-left: 0;
         margin-top: 0;
         padding: 2.25em 1.5em 0.25em 1.5em;
-        padding-top: 5em; /* Make sure the header doesn't overlap */
+        padding-top: 7em; /* Make sure the header doesn't overlap */
     }
 }
 
