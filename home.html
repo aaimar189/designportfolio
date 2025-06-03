@@ -1,265 +1,425 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Andrea Aimar · Freelance Graphic Designer & Visual Strategist Based in Shanghai</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<link rel="icon" href="images/favicon.webp" type="image/x-icon">
-		<link rel="stylesheet" href="assets/css/main.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+	<title>Andrea Aimar · Freelance Graphic Designer & Visual Strategist Based in Shanghai</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" href="images/favicon.webp" type="image/x-icon">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/mobile.css" />
+	<link rel="stylesheet" href="assets/css/form.css" />
+	<link rel="stylesheet" href="assets/css/form-mobile.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GS10PDK5M0"></script>
-		<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GS10PDK5M0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  		gtag('config', 'G-GS10PDK5M0');
-		</script>	
-			
-	</head>
-	<body class="is-preload">
+		gtag('config', 'G-GS10PDK5M0');
+	</script>
+	<style>
+		/* Video Container Styling */
+		.video-container {
+			width: 100%;
+			max-width: 800px;
+			margin: 2rem auto;
+			position: relative;
+			padding-top: 56.25%;
+			/* 16:9 Aspect Ratio */
+			border: 2px solid #fff;
+			box-sizing: border-box;
+		}
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
-				<a href="#" class="image avatar"><img src="images/avatar.webp" alt="" /></a>
-				<h1><strong>I am Andrea</strong>, a seasoned visual designer with branding expertise,
-					helping businesses bring their visual ideas to life.</h1>
-			</div>
-		</header>
+		.video-container iframe,
+		.video-container video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
 
-		<!-- Main -->
-		<div id="main">
+		/* Video Placeholder Styling */
+		.video-placeholder {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
 
-			<!-- One -->
-			<section id="one">
-				<header class="major">
-					<h2>Here, I share my favorite works from my design journey.
-					Hope you enjoy them, and maybe we can create something great together!</h2>
-				</header>
-				<div class="text-wrapper">
-					<p class="short-text"> I have over eight years of experience working with design agencies and international companies.
-						Throughout my career, I've honed my skills in art direction, visual storytelling, and crafting compelling brand identities.
-						My expertise spans <strong>graphic layout design, presentation mockups, and label design</strong>, helping businesses
-						bring their ideas to life with impactful visuals.</p>
-					<p class="extra-text"> This part of the text will be hidden initially.</p>
-				</div>
-				<ul class="actions">
-					<li><a href="#" class="button" id="reveal-btn">Learn More</a></li>
-					<li><a href="#" class="button" id="see-less-btn" style="display:none;">See Less</a></li>
-				</ul>
-			</section>
+		.placeholder-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-			<!-- Two -->
-			<section id="two">
-				<h2>My Selection of Favorite Works</h2>
-				<div class="row">
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/01.webp" class="image fit thumb" data-lightbox="work-1" data-title="Label Design for BOLIAN HOTELS">
-							<img src="images/thumbs/01.webp" alt="Label Design for BOLIAN HOTELS" />
-						</a>
-						<a href="images/fulls/01b.webp" class="image fit thumb" data-lightbox="work-1" data-title="Label Design for BOLIAN HOTELS"></a>
-					</article>
+		.placeholder-content {
+			flex-direction: column;
+		}
 
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/02.webp" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design for GAMOS GROUP">
-							<img src="images/thumbs/02.webp" alt="Catalog Design for GAMOS GROUP" />
-						</a>
-						<a href="images/fulls/02b.webp" class="image fit thumb" data-lightbox="work-2" data-title="Catalog Design for GAMOS GROUP"></a>
-					</article>
+		.video-icon {
+			font-size: 3rem;
+			color: #fff;
+			margin-bottom: 1rem;
+		}
 
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/03.webp" class="image fit thumb" data-lightbox="work-3" data-title="Datasheet Creation for SYMTECH SOLAR">
-							<img src="images/thumbs/03.webp" alt="Datasheet Creation for SYMTECH SOLAR" />
-						</a>
-						<a href="images/fulls/03b.webp" class="image fit thumb" data-lightbox="work-3" data-title="Datasheet Creation for SYMTECH SOLAR"></a>
-					</article>
+		.placeholder-content p {
+			color: #fff;
+			font-size: 1.5rem;
+			text-align: center;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin: 0 0 0.5rem 0;
+		}
 
-					<article class="col-6 col-12-xsmall work-item">
-						<a href="images/fulls/04.webp" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction for LAIBA">
-							<img src="images/thumbs/04.webp" alt="Packaging Art Direction for LAIBA" />
-						</a>
-						<a href="images/fulls/04b.webp" class="image fit thumb" data-lightbox="work-4" data-title="Packaging Art Direction for LAIBA"></a>
-					</article>
+		.video-note {
+			color: #fff;
+			font-size: 0.9rem;
+			opacity: 0.8;
+		}
 
-					<!-- Extra Projects -->
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/05.webp" class="image fit thumb" data-lightbox="work-5" data-title="Branding and Marketing Collaterals for STREET8">
-							<img src="images/thumbs/05.webp" alt="Branding and Marketing Collaterals for STREET8" />
-						</a>
-						<a href="images/fulls/05b.webp" class="image fit thumb" data-lightbox="work-5" data-title="Branding and Marketing Collaterals for STREET8"></a>
-					</article>
+		/* Responsive adjustments */
+		@media screen and (max-width: 736px) {
+			.video-container {
+				margin: 1rem auto;
+				width: 95%;
+				border-width: 1px;
+			}
 
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/06.webp" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design for LA BOTTEGA">
-							<img src="images/thumbs/06.webp" alt="Booth Design for LA BOTTEGA" />
-						</a>
-						<a href="images/fulls/06b.webp" class="image fit thumb" data-lightbox="work-6" data-title="Booth Design for LA BOTTEGA"></a>
-					</article>
+			.placeholder-content p {
+				font-size: 1rem;
+				margin: 0 0 0.3rem 0;
+			}
 
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/07.webp" class="image fit thumb" data-lightbox="work-7" data-title="Label Design for PROVINCIAL VODKA">
-							<img src="images/thumbs/07.webp" alt="Label Design for PROVINCIAL VODKA" />
-						</a>
-						<a href="images/fulls/07b.webp" class="image fit thumb" data-lightbox="work-7" data-title="Label Design for PROVINCIAL VODKA"></a>
-					</article>
+			.video-icon {
+				font-size: 2rem;
+				margin-bottom: 0.5rem;
+			}
 
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/08.webp" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design for ZAINI">
-							<img src="images/thumbs/08.webp" alt="E-commerce Design for ZAINI" />
-						</a>
-						<a href="images/fulls/08b.webp" class="image fit thumb" data-lightbox="work-8" data-title="E-commerce Design for ZAINI"></a>
-					</article>
+			.video-note {
+				font-size: 0.8rem;
+			}
+		}
+	</style>
+</head>
 
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/09.webp" class="image fit thumb" data-lightbox="work-9" data-title="Poster Design for CBTRAVEL">
-							<img src="images/thumbs/09.webp" alt="Poster Design for CBTRAVEL" />
-						</a>
-						<a href="images/fulls/09b.webp" class="image fit thumb" data-lightbox="work-9" data-title="Poster Design for CBTRAVEL"></a>
-					</article>
+<body class="is-preload">
 
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/10.webp" class="image fit thumb" data-lightbox="work-10" data-title="Label Design for KEIKYU HOTELS">
-							<img src="images/thumbs/10.webp" alt="Label Design for KEIKYU HOTELS" />
-						</a>
-						<a href="images/fulls/10b.webp" class="image fit thumb" data-lightbox="work-10" data-title="Label Design"></a>
-					</article>
-
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/11.webp" class="image fit thumb" data-lightbox="work-11" data-title="Visual Identity Design for CBTRAVEL">
-							<img src="images/thumbs/11.webp" alt="Visual Identity Design for CBTRAVEL" />
-						</a>
-						<a href="images/fulls/11.webp" class="image fit thumb" data-lightbox="work-11" data-title="Visual Identity Design for CBTRAVEL"></a>
-					</article>
-
-					<article class="col-6 col-12-xsmall work-item extra-project" style="display:none;">
-						<a href="images/fulls/12.webp" class="image fit thumb" data-lightbox="work-12" data-title="Packaging Design for BIMAR">
-							<img src="images/thumbs/12.webp" alt="Packaging Design for BIMAR" />
-						</a>
-						<a href="images/fulls/12b.webp" class="image fit thumb" data-lightbox="work-12" data-title="Packaging Design for BIMAR"></a>
-					</article>
-					
-				</div>
-				<div class="button-container" style="text-align: left; margin-bottom: 2em;">
-					<a href="#" class="button" id="portfolio-btn">Discover More</a>
-					<a href="#" class="button" id="show-less-btn" style="display:none;">Show Less</a>
-				</div>
-			</section>
-
-			<!-- Three -->
-			<section id="three">
-				<h2>Get In Touch</h2>
-				<p> Please fill out the form below so we can get to know each other better and see if we'd be a great fit to work together!</p>
-				<div class="row">
-					<div class="col-8 col-12-small">
-						<form method="post" action="https://formsubmit.co/andreaaimardesign@gmail.com">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-								<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-								<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>	
-					</div>
-					<div class="col-4 col-12-small">
-						<ul class="labeled-icons">
-							<li>
-								<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-								South Xiangyang Road, 489<br />
-								Shanghai, 200000<br />
-								China
-							</li>
-							<li>
-								<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-								0086-156-18607421
-							</li>
-							<li>
-								<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-								<a href="#">me@designedbyandrea.com</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-
+	<!-- Mobile Top Bar (Only visible on mobile) -->
+	<div class="mobile-top-bar">
+		<div class="logo-container">
+			<img src="images/logo.png" alt="Andrea Aimar Logo" class="logo">
 		</div>
+		<div class="quote-btn-container">
+			<a href="#three" class="quote-btn">Get a Quote</a>
+		</div>
+	</div>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="icons">
-					<li><a href="https://instagram.com/designed.by.andrea" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="mailto:andreaaimardesign@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Andrea Aimar 2025 Shanghai</li>
-				</ul>
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="images/avatar.webp" alt="" /></a>
+			<h1><strong>I am Andrea</strong>, a seasoned visual designer with branding expertise,
+				helping businesses bring their visual ideas to life.</h1>
+		</div>
+	</header> <!-- Main -->
+	<div id="main">
+		<!-- Top Bar with Logo and Quote Button -->
+		<div class="top-bar">
+			<div class="logo-container">
+				<img src="images/logo.png" alt="Andrea Aimar Logo" class="logo">
 			</div>
-		</footer>
+			<div class="quote-btn-container">
+				<a href="#three" class="quote-btn">Get a Quote</a>
+			</div>
+		</div> <!-- One -->
+		<section id="one">
+			<header class="major">
+				<h2>Here, I share my favorite works from my design journey.
+					Hope you enjoy them, and maybe we can create something great together!</h2>
+			</header>
+			<div class="text-wrapper">
+				<p class="short-text"> I have over eight years of experience working with design agencies and
+					international companies.
+					Throughout my career, I've honed my skills in art direction, visual storytelling, and crafting
+					compelling brand identities.
+					My expertise spans <strong>graphic layout design, presentation mockups, and label design</strong>,
+					helping businesses
+					bring their ideas to life with impactful visuals.</p>
+				<p class="extra-text"> This part of the text will be hidden initially.</p>
+			</div> <!-- YouTube Video Section -->
+			<div class="video-container">
+				<iframe src="https://www.youtube.com/embed/w6uX9jamcwQ?si=uH8bSaaY_kYs2C_C" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+				</iframe>
+			</div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.poptrox.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-			$(document).ready(function () {
-				// Initialize lightbox for all images initially
+			<ul class="actions">
+				<li><a href="#" class="button" id="reveal-btn">Learn More</a></li>
+				<li><a href="#" class="button" id="see-less-btn" style="display:none;">See Less</a></li>
+			</ul>
+		</section><!-- Two -->
+		<section id="two">
+			<h2>My Selection of Favorite Works</h2>
+			<div class="row">
+				<article class="col-12 col-12-xsmall work-item">
+					<a href="images/fulls/01.webp" class="image fit thumb" data-lightbox="work-1"
+						data-title="Label Design for BOLIAN HOTELS">
+						<img src="images/thumbs/01.webp" alt="Label Design for BOLIAN HOTELS" />
+					</a>
+					<a href="images/fulls/01b.webp" class="image fit thumb" data-lightbox="work-1"
+						data-title="Label Design for BOLIAN HOTELS"> </a>
+				</article>
+				<article class="col-12 col-12-xsmall work-item">
+					<a href="images/fulls/02.webp" class="image fit thumb" data-lightbox="work-2"
+						data-title="Catalog Design for GAMOS GROUP">
+						<img src="images/thumbs/02.webp" alt="Catalog Design for GAMOS GROUP" />
+					</a>
+					<a href="images/fulls/02b.webp" class="image fit thumb" data-lightbox="work-2"
+						data-title="Catalog Design for GAMOS GROUP"> </a>
+				</article>
+
+				<article class="col-12 col-12-xsmall work-item">
+					<a href="images/fulls/03.webp" class="image fit thumb" data-lightbox="work-3"
+						data-title="Datasheet Creation for SYMTECH SOLAR">
+						<img src="images/thumbs/03.webp" alt="Datasheet Creation for SYMTECH SOLAR" />
+					</a>
+					<a href="images/fulls/03b.webp" class="image fit thumb" data-lightbox="work-3"
+						data-title="Datasheet Creation for SYMTECH SOLAR"> </a>
+				</article>
+				<article class="col-12 col-12-xsmall work-item">
+					<a href="images/fulls/04.webp" class="image fit thumb" data-lightbox="work-4"
+						data-title="Packaging Art Direction for LAIBA">
+						<img src="images/thumbs/04.webp" alt="Packaging Art Direction for LAIBA" />
+					</a>
+					<a href="images/fulls/04b.webp" class="image fit thumb" data-lightbox="work-4"
+						data-title="Packaging Art Direction for LAIBA"> </a>
+				</article><!-- Extra Projects -->
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/05.webp" class="image fit thumb" data-lightbox="work-5"
+						data-title="Branding and Marketing Collaterals for STREET8">
+						<img src="images/thumbs/05.webp" alt="Branding and Marketing Collaterals for STREET8" />
+					</a>
+					<a href="images/fulls/05b.webp" class="image fit thumb" data-lightbox="work-5"
+						data-title="Branding and Marketing Collaterals for STREET8"></a>
+				</article>
+
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/06.webp" class="image fit thumb" data-lightbox="work-6"
+						data-title="Booth Design for LA BOTTEGA">
+						<img src="images/thumbs/06.webp" alt="Booth Design for LA BOTTEGA" />
+					</a>
+					<a href="images/fulls/06b.webp" class="image fit thumb" data-lightbox="work-6"
+						data-title="Booth Design for LA BOTTEGA"></a>
+				</article>
+
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/07.webp" class="image fit thumb" data-lightbox="work-7"
+						data-title="Label Design for PROVINCIAL VODKA">
+						<img src="images/thumbs/07.webp" alt="Label Design for PROVINCIAL VODKA" />
+					</a>
+					<a href="images/fulls/07b.webp" class="image fit thumb" data-lightbox="work-7"
+						data-title="Label Design for PROVINCIAL VODKA"></a>
+				</article>
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/08.webp" class="image fit thumb" data-lightbox="work-8"
+						data-title="E-commerce Design for ZAINI">
+						<img src="images/thumbs/08.webp" alt="E-commerce Design for ZAINI" />
+					</a>
+					<a href="images/fulls/08b.webp" class="image fit thumb" data-lightbox="work-8"
+						data-title="E-commerce Design for ZAINI"></a>
+				</article>
+
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/09.webp" class="image fit thumb" data-lightbox="work-9"
+						data-title="Poster Design for CBTRAVEL">
+						<img src="images/thumbs/09.webp" alt="Poster Design for CBTRAVEL" />
+					</a>
+					<a href="images/fulls/09b.webp" class="image fit thumb" data-lightbox="work-9"
+						data-title="Poster Design for CBTRAVEL"></a>
+				</article>
+
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/10.webp" class="image fit thumb" data-lightbox="work-10"
+						data-title="Label Design for KEIKYU HOTELS">
+						<img src="images/thumbs/10.webp" alt="Label Design for KEIKYU HOTELS" />
+					</a>
+					<a href="images/fulls/10b.webp" class="image fit thumb" data-lightbox="work-10"
+						data-title="Label Design"></a>
+				</article>
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/11.webp" class="image fit thumb" data-lightbox="work-11"
+						data-title="Visual Identity Design for CBTRAVEL">
+						<img src="images/thumbs/11.webp" alt="Visual Identity Design for CBTRAVEL" />
+					</a>
+					<a href="images/fulls/11.webp" class="image fit thumb" data-lightbox="work-11"
+						data-title="Visual Identity Design for CBTRAVEL"></a>
+				</article>
+
+				<article class="col-12 col-12-xsmall work-item extra-project" style="display:none;">
+					<a href="images/fulls/12.webp" class="image fit thumb" data-lightbox="work-12"
+						data-title="Packaging Design for BIMAR">
+						<img src="images/thumbs/12.webp" alt="Packaging Design for BIMAR" />
+					</a>
+					<a href="images/fulls/12b.webp" class="image fit thumb" data-lightbox="work-12"
+						data-title="Packaging Design for BIMAR"></a>
+				</article>
+
+			</div>
+			<div class="button-container" style="text-align: left; margin-bottom: 2em;">
+				<a href="#" class="button" id="portfolio-btn">Discover More</a>
+				<a href="#" class="button" id="show-less-btn" style="display:none;">Show Less</a>
+			</div>
+		</section>
+
+		<!-- Three -->
+		<section id="three">
+			<h2>Get In Touch</h2>
+			<p> Please fill out the form below so we can get to know each other better and see if we'd be a great fit to
+				work together!</p>
+			<div class="row">
+				<div class="col-8 col-12-small">
+					<form method="post" action="https://formsubmit.co/andreaaimardesign@gmail.com">
+						<!-- FormSubmit.co configuration fields -->
+						<input type="hidden" name="_subject" value="New Contact Form Submission">
+						<input type="hidden" name="_template" value="table">
+						<input type="hidden" name="_next" value="thank-you.html">
+						<input type="hidden" name="_captcha" value="true">
+						<!-- Honeypot field to prevent spam -->
+						<input type="text" name="_honey" style="display:none">
+
+						<div class="row gtr-uniform gtr-50">
+							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name"
+									required /></div>
+							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+									placeholder="Email" required /></div>
+							<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"
+									required></textarea></div>
+							<div class="col-12" style="margin-top: 1em;">
+								<div class="form-checkbox" style="display: flex; align-items: flex-start;">
+									<input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+									<label for="privacy-consent"
+										style="margin-left: 10px; font-size: 0.9em; line-height: 1.4;">
+										I agree to be contacted via email in regards to my request. Read our <a
+											href="privacy-policy.html" class="privacy-link">privacy policy</a>.
+									</label>
+								</div>
+							</div>
+						</div>
+						<ul class="actions" style="margin-top: 1.5em;">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+					</form>
+				</div>
+				<div class="col-4 col-12-small">
+					<ul class="labeled-icons">
+						<li>
+							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+							South Xiangyang Road, 489<br />
+							Shanghai, 200000<br />
+							China
+						</li>
+						<li>
+							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+							0086-156-18607421
+						</li>
+						<li>
+							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+							<a href="#">me@designedbyandrea.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://instagram.com/designed.by.andrea" class="icon brands fa-instagram"><span
+							class="label">Instagram</span></a></li>
+				<li><a href="mailto:andreaaimardesign@gmail.com" class="icon solid fa-envelope"><span
+							class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Andrea Aimar 2025 Shanghai</li>
+				<li><a href="privacy-policy.html">Privacy Policy</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Initialize lightbox for all images initially
+			initializeLightbox();
+
+			// Handle "Discover More" button click
+			$('#portfolio-btn').click(function (e) {
+				e.preventDefault(); // Prevent default link behavior
+
+				// Show hidden projects
+				$('.extra-project').fadeIn();
+
+				// Destroy the existing poptrox instance
+				$('.image.fit.thumb').data('poptrox', null);
+
+				// Reinitialize lightbox for all images (including extra projects)
 				initializeLightbox();
 
-				// Handle "Discover More" button click
-				$('#portfolio-btn').click(function (e) {
-					e.preventDefault(); // Prevent default link behavior
-
-					// Show hidden projects
-					$('.extra-project').fadeIn();
-
-					// Destroy the existing poptrox instance
-					$('.image.fit.thumb').data('poptrox', null);
-
-					// Reinitialize lightbox for all images (including extra projects)
-					initializeLightbox();
-
-					// Hide the "Discover More" button and show "Show Less" button
-					$(this).hide();
-					$('#show-less-btn').show();
-				});
-
-				// Handle "Show Less" button click
-				$('#show-less-btn').click(function (e) {
-					e.preventDefault(); // Prevent default link behavior
-
-					// Hide extra projects
-					$('.extra-project').fadeOut();
-
-					// Destroy the existing poptrox instance
-					$('.image.fit.thumb').data('poptrox', null);
-
-					// Reinitialize lightbox for visible images only
-					initializeLightbox();
-
-					// Show the "Discover More" button and hide "Show Less" button
-					$('#portfolio-btn').show();
-					$(this).hide();
-				});
-
-				// Function to initialize lightbox
-				function initializeLightbox() {
-					$('.image.fit.thumb').poptrox({
-						usePopupCaption: true, // Show captions
-						usePopupNav: true, // Enable navigation between images
-					});
-				}
+				// Hide the "Discover More" button and show "Show Less" button
+				$(this).hide();
+				$('#show-less-btn').show();
 			});
-		</script>
-  
 
-	</body>
+			// Handle "Show Less" button click
+			$('#show-less-btn').click(function (e) {
+				e.preventDefault(); // Prevent default link behavior
+
+				// Hide extra projects
+				$('.extra-project').fadeOut();
+
+				// Destroy the existing poptrox instance
+				$('.image.fit.thumb').data('poptrox', null);
+
+				// Reinitialize lightbox for visible images only
+				initializeLightbox();
+
+				// Show the "Discover More" button and hide "Show Less" button
+				$('#portfolio-btn').show();
+				$(this).hide();
+			});
+
+			// Function to initialize lightbox
+			function initializeLightbox() {
+				$('.image.fit.thumb').poptrox({
+					usePopupCaption: true, // Show captions
+					usePopupNav: true, // Enable navigation between images
+				});
+			}
+		});
+		// YouTube video is embedded with responsive iframe
+		// YouTube handles all playback controls and fullscreen functionality
+	</script>
+
+
+</body>
+
 </html>
