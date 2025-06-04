@@ -55,11 +55,50 @@
     }
 
     /* Improve button styles on mobile */
-    .actions .button {
-        padding: 8px 15px;
+    .actions .button,
+    .button-container .button {
+        padding: 1px 15px;
         font-size: 0.85rem;
         width: 100%;
         margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    /* Center all action buttons on mobile */
+    .actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .actions li {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Center the button container for portfolio buttons */
+    .button-container {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .button-container .button {
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Submit button (Send Message) centering */
+    input[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        max-width: 250px;
+        width: 100%;
     }
 
     /* Ensure all text uses Libre Baskerville font */
