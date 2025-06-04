@@ -24,7 +24,7 @@
     /* Submit button */
     input[type="submit"] {
         width: 100%;
-        padding:-0.25rem !important;
+        padding: -0.25rem !important;
         font-size: 1rem !important;
         max-width: 250px;
         margin: 0 auto;
