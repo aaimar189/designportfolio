@@ -155,63 +155,62 @@
 					helping businesses
 					bring their ideas to life with impactful visuals.
 				</p>
-
-			<button id="toggleBtn">Show More</button>
-				
-			<p class="extra-text">
+				<div class="extra-text">
 					<div class="pricing-table">
-					<div class="option">
-    					<h3>Logo Development</h3>
-    					<p>Three custom logo concepts refined with unlimited revisions. Perfect for building a memorable brand.</p>
-   					<div class="price">$200</div>
-    					<ul>
-      						<li>Custom brochures & flyers</li>
-      						<li>Business card design</li>
-      						<li>Presentation branded templates</li>
-    					</ul>
-  				</div>
+						<div class="option">
+							<h3>Logo Development</h3>
+							<p>Three custom logo concepts refined with unlimited revisions. Perfect for building a
+								memorable
+								brand.</p>
+							<div class="price">$200</div>
+							<ul>
+								<li>Custom brochures & flyers</li>
+								<li>Business card design</li>
+								<li>Presentation branded templates</li>
+							</ul>
+						</div>
 
-  				<div class="option popular">
-    				<h3>Essential Visual Identity</h3>
-    				<p>The core branding elements your business needs to look professional and cohesive.</p>
-    				<div class="price">$2,000</div>
-    					<ul>
-      						<li>Brand Positioning & Messaging</li>
-      						<li>Logo & Brand Claim</li>
-      						<li>Color Palette & Guidelines</li>
-      						<li>Typography System</li>
-      						<li>Imagery Style</li>
-    					</ul>
- 			 	</div>
+						<div class="option popular">
+							<h3>Essential Visual Identity</h3>
+							<p>The core branding elements your business needs to look professional and cohesive.</p>
+							<div class="price">$2,000</div>
+							<ul>
+								<li>Brand Positioning & Messaging</li>
+								<li>Logo & Brand Claim</li>
+								<li>Color Palette & Guidelines</li>
+								<li>Typography System</li>
+								<li>Imagery Style</li>
+							</ul>
+						</div>
 
-  				<div class="option">
-    				<h3>Marketing Campaign</h3>
-    				<p>Launch your product with a campaign designed to spark attention and drive real results.</p>
-    				<div class="price">$20,000</div>
-    					<ul>
-      						<li>Product or Branding Videos</li>
-      						<li>Influencer-driven Short Videos</li>
-      						<li>Platform Strategy & Social Management</li>
-      						<li>Media Collaborations</li>
-    					</ul>
-  				</div>
-			</p>
-			
-			</div> <!-- YouTube Video Section -->
+						<div class="option">
+							<h3>Marketing Campaign</h3>
+							<p>Launch your product with a campaign designed to spark attention and drive real results.
+							</p>
+							<div class="price">$20,000</div>
+							<ul>
+								<li>Product or Branding Videos</li>
+								<li>Influencer-driven Short Videos</li>
+								<li>Platform Strategy & Social Management</li>
+								<li>Media Collaborations</li>
+							</ul>
+						</div>
+					</div>
+				</div><!-- YouTube Video Section -->
 
 
-			<ul class="actions">
-				<li><a href="#" class="button" id="reveal-btn">Learn More</a></li>
-				<li><a href="#" class="button" id="see-less-btn" style="display:none;">See Less</a></li>
-			</ul>
+				<ul class="actions">
+					<li><a href="#" class="button" id="reveal-btn">Learn More</a></li>
+					<li><a href="#" class="button" id="see-less-btn" style="display:none;">See Less</a></li>
+				</ul>
 
-			<div class="video-container">
-				<iframe src="https://www.youtube.com/embed/w6uX9jamcwQ?si=uH8bSaaY_kYs2C_C" title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-				</iframe>
-			</div>
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/w6uX9jamcwQ?si=uH8bSaaY_kYs2C_C"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+					</iframe>
+				</div>
 
 		</section><!-- Two -->
 		<section id="two">
@@ -458,10 +457,22 @@
 					usePopupNav: true, // Enable navigation between images
 				});
 			}
-		});
-		// YouTube video is embedded with responsive iframe
+		});		// YouTube video is embedded with responsive iframe
 		// YouTube handles all playback controls and fullscreen functionality
+
+		// Quick test for pricing table visibility
+		setTimeout(function () {
+			console.log("Testing pricing table visibility...");
+			var extraText = document.querySelector('.extra-text');
+			var revealBtn = document.getElementById('reveal-btn');
+
+			console.log('Extra text element:', extraText);
+			console.log('Extra text classes:', extraText ? extraText.className : 'not found');
+			console.log('Extra text display:', extraText ? getComputedStyle(extraText).display : 'not found');
+			console.log('Reveal button:', revealBtn);
+		}, 1000);
 	</script>
+
 
 
 </body>
