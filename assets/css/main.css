@@ -4986,3 +4986,87 @@ body.is-touch .poptrox-popup .closer {
 #two .work-item a.image.fit.thumb:not(:first-child) {
 	display: none;
 }
+
+
+
+/* Price table */
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-table {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  justify-content: center;
+}
+
+.option {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+
+.option h3 {
+  margin-top: 0;
+  color: #555;
+}
+
+.price {
+  font-size: 28px;
+  background: linear-gradient(90deg, #f81ce5, #7928ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 15px 0;
+}
+
+.popular {
+  background: #000;
+  color: white;
+}
+
+.option ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.option ul li::before {
+  content: "✔️";
+  margin-right: 8px;
+  color: green;
+}
+
+.get-started {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.get-started:hover {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+}
