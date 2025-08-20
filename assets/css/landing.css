@@ -8,25 +8,28 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Landing Page Layout */
 .landing-container {
-    height: 100vh; /* Full screen */
+    height: 100vh;
+    /* Full screen */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     text-align: center;
     color: white;
-    padding: 0 20px; /* For small screens */
+    padding: 0 20px;
+    /* For small screens */
     overflow: hidden;
 }
 
-/* Background Slideshow */
+/* Background Slideshow Container */
 .slideshow {
     position: absolute;
     top: 0;
@@ -34,39 +37,95 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: -1;
-    animation: slideshow 12s infinite; /* Adjust duration for smoother transition */
-    background-size: cover;
-    background-position: center;
-    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+    background-color: #2c2c2c;
+    /* Fallback background color */
 }
 
-/* Keyframes for background images */
-@keyframes slideshow {
-    0% {
-        background-image: url('/images/background-01.webp');
+/* Individual slide elements */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+/* Background images for each slide */
+.slide1 {
+    background-image: url('../../images/background-01.webp');
+    animation: slideAnimation1 15s infinite;
+    opacity: 1;
+    /* Start with first image visible */
+}
+
+.slide2 {
+    background-image: url('../../images/background-02.webp');
+    animation: slideAnimation2 15s infinite;
+}
+
+.slide3 {
+    background-image: url('../../images/background-03.webp');
+    animation: slideAnimation3 15s infinite;
+}
+
+/* Keyframes for seamless transitions */
+@keyframes slideAnimation1 {
+
+    0%,
+    30% {
         opacity: 1;
     }
-    33% {
-        background-image: url('/images/background-02.webp');
-        opacity: 1;
-    }
-    50% {
+
+    33.33%,
+    100% {
         opacity: 0;
     }
-    66% {
-        background-image: url('/images/background-03.webp');
+}
+
+@keyframes slideAnimation2 {
+
+    0%,
+    30% {
+        opacity: 0;
+    }
+
+    33.33%,
+    63.33% {
         opacity: 1;
     }
+
+    66.66%,
     100% {
-        background-image: url('/images/background-01.webp');
+        opacity: 0;
+    }
+}
+
+@keyframes slideAnimation3 {
+
+    0%,
+    63.33% {
+        opacity: 0;
+    }
+
+    66.66%,
+    96.66% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
 .landing-content {
     max-width: 600px;
     padding: 20px;
-    width: 100%; /* Ensures it adjusts to screen size */
+    width: 100%;
+    /* Ensures it adjusts to screen size */
 }
 
 /* Typography */
@@ -114,9 +173,11 @@ p {
     h1 {
         font-size: 2.5em;
     }
+
     p {
         font-size: 1em;
     }
+
     .btn {
         font-size: 1em;
         padding: 12px 25px;
@@ -127,6 +188,7 @@ p {
     h1 {
         font-size: 2em;
     }
+
     .btn {
         font-size: 1em;
         padding: 10px 20px;
@@ -134,8 +196,10 @@ p {
 }
 
 .logo {
-    width: 150px; /* Adjust size as needed */
-    margin-bottom: 20px; /* Space between logo and the heading */
+    width: 150px;
+    /* Adjust size as needed */
+    margin-bottom: 20px;
+    /* Space between logo and the heading */
     display: block;
     margin-left: auto;
     margin-right: auto;
