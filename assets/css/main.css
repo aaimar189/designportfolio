@@ -183,9 +183,7 @@ html {
 }
 
 /* Global font rule to ensure all text elements use Libre Baskerville */
-* {
-	font-family: 'Libre Baskerville', serif;
-}
+* { font-family: inherit; }
 
 /* Exception for Font Awesome icons */
 .icon:before,
