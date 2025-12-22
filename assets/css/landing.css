@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:400,400italic,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap");
 
 /* Reset and Box Sizing */
 * {
@@ -11,7 +11,7 @@
 body,
 html {
     height: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Landing Page Layout */
@@ -133,12 +133,16 @@ h1 {
     font-size: 3em;
     color: #D16200;
     margin-bottom: 20px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.1;
 }
 
 p {
     font-size: 1.2em;
     margin-bottom: 30px;
-    font-family: 'Libre Baskerville';
+    font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
 }
 
 /* Button Styles */
