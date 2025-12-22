@@ -4093,7 +4093,7 @@ input[type="button"]:active,
 .button:active {
 	background-color: rgba(73, 191, 157, 0.1);
 	border-color: #d19a00;
-	color: #49bf9d !important;
+	color: #d19a00 !important;
 }
 
 input[type="submit"].icon,
