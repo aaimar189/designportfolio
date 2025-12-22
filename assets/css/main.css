@@ -182,9 +182,6 @@ html {
 	box-sizing: inherit;
 }
 
-/* Global font rule to ensure all text elements use Libre Baskerville */
-* { font-family: inherit; }
-
 /* Exception for Font Awesome icons */
 .icon:before,
 .icon.solid:before,
@@ -4304,21 +4301,22 @@ input[type="button"]:disabled,
 #header h5,
 #header h6 {
 	color: #ffffff;
+	font-family: 'Fraunces', Georgia, serif; /* se sono veri titoli */
+	font-weight: 600;
+	line-height: 1.2;
 }
 
 #header h1 {
 	color: #ffffff;
 	font-size: 1.75em;
-	line-height: 1.75em;
-	font-weight: 300;
-	font-family: 'Heebo', sans-serif;
-	/* Lighter weight for the main text */
+	line-height: 1.6;
+	font-weight: 400;
+	font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #header h1 strong {
-	font-weight: 700;
-	font-family: 'Heebo', sans-serif;
-	/* Bolder weight for the "I am Andrea" part */
+	font-weight: 600;
+	font-family: inherit; /* eredita Space Grotesk */
 	margin: 0;
 }
 
@@ -5162,8 +5160,6 @@ body.is-touch .poptrox-popup .closer {
 .extra-project {
 	display: none;
 }
-
-
 
 .image.thumb:after {
 	-moz-transition: opacity 0.2s ease-in-out;
