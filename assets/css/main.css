@@ -4136,8 +4136,8 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 .button.primary {
-	background-color: #49bf9d;
-	border-color: #49bf9d;
+	background-color: #d19a00;
+	border-color: #d19a00;
 	color: #ffffff !important;
 }
 
