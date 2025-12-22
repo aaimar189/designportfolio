@@ -165,7 +165,7 @@ p {
 .btn:active {
     background-color: rgba(255, 255, 255, 0);
     border-color: #d19a00;
-    color: #49bf9d;
+    color: #d19a00;
 }
 
 /* Responsive Styles */
