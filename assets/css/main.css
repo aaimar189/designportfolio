@@ -5010,6 +5010,7 @@ body.is-touch .poptrox-popup .closer {
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	line-height: 1.25;
+	padding-bottom: 0.12em;
 }
 
 .option.popular .price {
