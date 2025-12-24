@@ -4467,7 +4467,7 @@ input[type="button"]:disabled,
 	padding-bottom: 3em;
 }
 
-poptrox-popup .loader {
+.poptrox-popup .loader {
   width: 40px;
   height: 40px;
   background: url("/images/logo.png") center / contain no-repeat;
