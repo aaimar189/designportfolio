@@ -4476,7 +4476,7 @@ input[type="button"]:disabled,
   width: 40px;
   height: 40px;
 
-  background: url("/images/logo.png") center / contain no-repeat;
+  background: url("/images/logo-symbol.png") center / contain no-repeat;
   animation: spin 1s linear infinite;
 
   font-size: 0;
