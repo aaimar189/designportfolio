@@ -4468,18 +4468,19 @@ input[type="button"]:disabled,
 }
 
 .poptrox-popup .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
   width: 40px;
   height: 40px;
+
   background: url("/images/logo.png") center / contain no-repeat;
   animation: spin 1s linear infinite;
-}
 
-.poptrox-popup .loader::before {
-  content: none;
-}
-
-.poptrox-popup .loader:before {
-	content: '\f1ce';
+  font-size: 0;
+  line-height: 0;
 }
 
 .poptrox-popup .caption {
