@@ -4468,16 +4468,36 @@ input[type="button"]:disabled,
 }
 
 .poptrox-popup .loader {
-  position: absolute;
-  left: 50%;
-  top: calc((100% - 3em) / 2);
-  transform: translate(-50%, -50%);
+	text-decoration: none;
+	-moz-animation: spin 1s linear infinite;
+	-webkit-animation: spin 1s linear infinite;
+	-ms-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+	font-size: 1.5em;
+	height: 1em;
+	left: 50%;
+	line-height: 1em;
+	margin: -0.5em 0 0 -0.5em;
+	position: absolute;
+	top: 50%;
+	width: 1em;
+}
 
-  width: 40px;
-  height: 40px;
+.poptrox-popup .loader:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
 
-  background: url("/images/logo-symbol.png") center / contain no-repeat;
-  animation: spin 1s linear infinite;
+.poptrox-popup .loader:before {
+	content: '\f1ce';
 }
 
 .poptrox-popup .caption {
