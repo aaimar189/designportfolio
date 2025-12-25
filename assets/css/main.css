@@ -4297,6 +4297,28 @@ input[type="button"]:disabled,
 	margin: 0 0 2em 0;
 }
 
+/* Reveal header content */
+body.is-preload #header > .inner {
+	opacity: 0;
+	transform: translateY(12px);
+}
+
+body:not(.is-preload) #header > .inner {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 500ms ease-out, transform 500ms ease-out;
+	will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body.is-preload #header > .inner,
+	body:not(.is-preload) #header > .inner {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+	}
+}
+
 #header strong,
 #header b {
 	color: #ffffff;
