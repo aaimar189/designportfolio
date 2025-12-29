@@ -3756,7 +3756,7 @@ input[type="radio"]+label:before {
 /* Avatar (circle image) */
 .image.welcome.header {
 	border-radius: 0;            /* annulla il cerchio da avatar */
-  	width: clamp(180px, 22vw, 320px);
+  	width: clamp(120px, 14vw, 200px);
   	margin: 0 0 18px 0;
 }
 
