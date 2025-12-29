@@ -3754,13 +3754,18 @@ input[type="radio"]+label:before {
 }
 
 /* Avatar (circle image) */
-.image.avatar {
-	border-radius: 100%;
+.image.welcome.header {
+	border-radius: 0;            /* annulla il cerchio da avatar */
+  	width: clamp(180px, 22vw, 320px);
+  	margin: 0 0 18px 0;
 }
 
-.image.avatar img {
-	border-radius: 100%;
-	width: 100%;
+.image.welcome.header img{
+	max-width: 100%;
+	border-radius: 0;
+  	width: 100%;
+  	height: auto;
+  	display: block;
 }
 
 /* List */
