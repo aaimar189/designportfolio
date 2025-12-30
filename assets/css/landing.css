@@ -72,6 +72,11 @@ html {
     animation: slideAnimation3 15s infinite;
 }
 
+.slide4 {
+    background-image: url('../../images/background-04.webp');
+    animation: slideAnimation3 15s infinite;
+}
+
 /* Keyframes for seamless transitions */
 @keyframes slideAnimation1 {
 
