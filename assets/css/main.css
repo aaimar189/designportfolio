@@ -4757,38 +4757,45 @@ body.is-touch .poptrox-popup .closer {
 
 @media screen and (max-width: 980px) {
 
-  #header {
-    background-attachment: scroll;
-    background-position: top left, center center;
-    background-size: auto, cover;
+	/* Basic */
 
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100svh;
+	h1 br,
+	h2 br,
+	h3 br,
+	h4 br,
+	h5 br,
+	h6 br {
+		display: none;
+	}
 
-    padding: 1.5em;
-    text-align: center;
+	/* List */
 
-    display: flex;
-    flex-direction: column;   /* IMPORTANTE */
-  }
+	ul.icons li .icon {
+		font-size: 1.25em;
+	}
 
-  #header > .inner {
-    flex: 1;                  /* prende lo spazio */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  /* centro verticale */
-    align-items: center;      /* centro orizzontale */
+	/* Header */
 
-    margin: 0;
-    padding: 0;
-  }
+	#header {
+		background-attachment: scroll;
+		background-position: top left, center center;
+		background-size: auto, cover;
+		left: auto;
+		padding: 6em 4em;
+		position: relative;
+		text-align: center;
+		top: auto;
+		width: 100%;
+		display: block;
+	}
 
-  #header > footer {
-    margin-top: auto;
-  }
-}
+	#header h1 {
+		font-size: 1.75em;
+	}
+
+	#header h1 br {
+		display: inline;
+	}
 
 	/* Footer */
 
