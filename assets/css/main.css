@@ -4756,46 +4756,34 @@ body.is-touch .poptrox-popup .closer {
 /* Medium */
 
 @media screen and (max-width: 980px) {
+  #header {
+    background-attachment: scroll;
+    background-position: top left, center center;
+    background-size: auto, cover;
 
-	/* Basic */
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
 
-	h1 br,
-	h2 br,
-	h3 br,
-	h4 br,
-	h5 br,
-	h6 br {
-		display: none;
-	}
+    min-height: 100vh;
+    min-height: 100svh;
 
-	/* List */
+    padding: 1.5em;
 
-	ul.icons li .icon {
-		font-size: 1.25em;
-	}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-	/* Header */
+    text-align: center;
+  }
 
-	#header {
-		background-attachment: scroll;
-		background-position: top left, center center;
-		background-size: auto, cover;
-		left: auto;
-		padding: 6em 4em;
-		position: relative;
-		text-align: center;
-		top: auto;
-		width: 100%;
-		display: block;
-	}
-
-	#header h1 {
-		font-size: 1.75em;
-	}
-
-	#header h1 br {
-		display: inline;
-	}
+  #header > .inner {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
 
 	/* Footer */
 
