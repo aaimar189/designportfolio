@@ -4712,7 +4712,6 @@ body.is-touch .poptrox-popup .closer {
 
 @media screen and (max-width: 1280px) {
 
-	/* Header */
 
 	#header {
 		padding: 6em 3em 3em 3em;
@@ -4727,12 +4726,11 @@ body.is-touch .poptrox-popup .closer {
 		display: none;
 	}
 
-	#header>.inner {
+	#header > .inner {
 		margin-bottom: 0;
-		padding-top: 50px;
+		padding-top: 0; /* <-- era 50px: toglilo per allineare WELCOME a logo/button */
 	}
 
-	/* Footer */
 
 	#footer .copyright li {
 		border-left-width: 0;
@@ -4742,7 +4740,6 @@ body.is-touch .poptrox-popup .closer {
 		padding-left: 0;
 	}
 
-	/* Main */
 
 	#main {
 		margin-left: 30%;
