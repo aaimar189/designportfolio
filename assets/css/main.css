@@ -4697,8 +4697,6 @@ body.is-touch .poptrox-popup .closer {
 
 @media screen and (max-width: 1800px) {
 
-	/* Basic */
-
 	body,
 	input,
 	select,
@@ -4708,10 +4706,9 @@ body.is-touch .poptrox-popup .closer {
 
 }
 
-/* Large */
+/* Large – SOLO LAPTOP (981–1280) */
 
-@media screen and (max-width: 1280px) {
-
+@media screen and (min-width: 981px) and (max-width: 1280px) {
 
 	#header {
 		padding: 6em 3em 3em 3em;
@@ -4726,11 +4723,11 @@ body.is-touch .poptrox-popup .closer {
 		display: none;
 	}
 
+	/* ALLINEAMENTO WELCOME */
 	#header > .inner {
 		margin-bottom: 0;
-		padding-top: 0; /* <-- era 50px: toglilo per allineare WELCOME a logo/button */
+		padding-top: 0;
 	}
-
 
 	#footer .copyright li {
 		border-left-width: 0;
@@ -4739,7 +4736,6 @@ body.is-touch .poptrox-popup .closer {
 		margin-left: 0;
 		padding-left: 0;
 	}
-
 
 	#main {
 		margin-left: 30%;
@@ -4750,11 +4746,9 @@ body.is-touch .poptrox-popup .closer {
 
 }
 
-/* Medium */
+/* Medium – TABLET E MOBILE GRANDI (≤980) */
 
 @media screen and (max-width: 980px) {
-
-	/* Basic */
 
 	h1 br,
 	h2 br,
@@ -4765,13 +4759,9 @@ body.is-touch .poptrox-popup .closer {
 		display: none;
 	}
 
-	/* List */
-
 	ul.icons li .icon {
 		font-size: 1.25em;
 	}
-
-	/* Header */
 
 	#header {
 		background-attachment: scroll;
@@ -4794,7 +4784,10 @@ body.is-touch .poptrox-popup .closer {
 		display: inline;
 	}
 
-	/* Footer */
+	/* RIPRISTINO SPAZIO MOBILE */
+	#header > .inner {
+		padding-top: 50px;
+	}
 
 	#footer {
 		background-attachment: scroll;
@@ -4827,8 +4820,6 @@ body.is-touch .poptrox-popup .closer {
 		padding-left: 0.75em;
 	}
 
-	/* Main */
-
 	#main {
 		margin: 0;
 		padding: 6em 4em;
@@ -4841,8 +4832,6 @@ body.is-touch .poptrox-popup .closer {
 
 @media screen and (max-width: 736px) {
 
-	/* Basic */
-
 	h1 {
 		font-size: 1.5em;
 	}
@@ -4854,6 +4843,8 @@ body.is-touch .poptrox-popup .closer {
 	h3 {
 		font-size: 1em;
 	}
+
+}
 
 	/* Section/Article */
 
