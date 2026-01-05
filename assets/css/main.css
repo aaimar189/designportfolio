@@ -4274,7 +4274,7 @@ input[type="button"]:disabled,
 	background-image: url("images/overlay.webp"), url("../../images/bg.webp");
 	background-position: top left, top left;
 	background-repeat: repeat, repeat;
-	background-size: contain;
+	background-size: auto, 180px 180px;
 	color: rgba(255, 255, 255, 0.5);
 	height: 100%;
 	left: 0;
